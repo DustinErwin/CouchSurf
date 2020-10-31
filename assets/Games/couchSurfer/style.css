@@ -1,0 +1,36 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px;
+    width: 750px;
+    height: 750px;
+}
+
+.grid div {
+    width: 50px;
+    height: 50px;
+    
+}
+
+.couch {
+    background-image: url('./images/couch.jpg') ;
+    background-repeat: no-repeat ;
+    background-size: contain;
+}
+
+.covid { 
+    background-image: url('./images/covid.png');
+    background-size: cover;
+    
+}
+
+.boom {
+    background-image: url('./images/poof.jpg');
+    background-size: contain;
+}
+
+.laser {
+    background-image: url('./images/laser.png');
+    background-size: cover;
+
+}
