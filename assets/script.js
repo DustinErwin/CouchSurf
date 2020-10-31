@@ -1,5 +1,7 @@
-//youtube assignments 
-let apiKey = "AIzaSyDMgUuuhmaYprHEA1ZG7iJBa-OY-kk092c";
+//Youtube Section
+
+//youtube assignments
+let youTubeApiKey = "AIzaSyDMgUuuhmaYprHEA1ZG7iJBa-OY-kk092c";
 let videoOption = $(".videoOptions");
 let data = "";
 let signInBtn = $(".signInBtn");
@@ -13,7 +15,7 @@ signInBtn.on("click", function () {
     type: "GET",
     url: "https://www.googleapis.com/youtube/v3/videos?",
     data: {
-      key: apiKey,
+      key: youTubeApiKey,
       part: "snippet",
       chart: "mostPopular",
       regionCode: "US",
@@ -21,11 +23,33 @@ signInBtn.on("click", function () {
       maxResults: 1,
     },
     success: function (data) {
-      videoPlayer.attr("src", `https://www.youtube.com/embed/${data.items[0].id}`);
-      console.log(category)
+      videoPlayer.attr(
+        "src",
+        `https://www.youtube.com/embed/${data.items[0].id}`
+      );
+      console.log(category);
     },
     error: function () {
       console.log("Request Failed");
     },
   });
 });
+
+//news api section
+gNewsApiKey = 'c5a54deae1f487f4cb1dc7a4c62630cd'
+newsInput = 'technology'
+newsSpace = $('.newsSpace')
+    $.ajax({
+        url: 'https://gnews.io/api/v4/top-headlines?token=' + gNewsApiKey + '&max=3&lang=en&topic=' + newsInput,
+        type: "GET",
+        success: function (data) {
+          console.log(newsSpace)
+          console.log(data);
+        },
+        error: function () {
+          console.log("Request Failed");
+        },
+      });
+
+      
+      
