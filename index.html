@@ -178,7 +178,7 @@
                     <div class="content">
                         <nav class="navbar">
                           <div class="navbar-start">
-                            <p class="navbar-item">News</p>
+                            <h2 class="navbar-item title is-2">Youtube Surf</h2>
                           </div>
                           <div class="navbar-end">
                             <div class="navbar-item">
@@ -186,17 +186,36 @@
                             </div>                            
                           </div>
                         </nav>
-                        <ul class="list">
-                          <li class="naked"><a href="#">Woah this happend!</a></li>
-                          <li class="naked"><a href="#">Woah this happend!</a></li>
-                          <li class="naked"><a href="#">Woah this happend!</a></li>
-                          <li class="naked"><a href="#">Woah this happend!</a></li>
-                          <li class="naked"><a href="#">Woah this happend!</a></li>
-                        </ul>
+                       
+                        <p class="subtitle">Top videos in popular catagories</p>
+                        <div class="select">
+                          <select class="test videoOptions">
+                            <!--category values are youtube category ids. Used in JS to grab that category-->
+                            <option>Select Catagory</option>
+                            <option class="musicOption" value="10">Music</option>
+                            <option class="sportsOption" value="17">Sports</option>
+                            <option class="gameingOption" value="20">Gaming</option>
+                            <option class="scienceTechOption" value="28">Science & Tech</option>
+                            <option class="howToOption" value="26">How to</option>
+                          </select>
+                          <br />
+                        </div>
+                        <button type="button" class="signInBtn button is-primary">Go!</button>
+                        <br />
+                        <iframe
+                          id="videoPlayer"
+                          width="560"
+                          height="315"
+                          src="https://gettravel.com/wp-content/uploads/2018/04/Video-Placeholder.jpg"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen
+                        ></iframe>
                     </div>              
                   </div>
                 </article>
               </div>
+              <!--Second Box-->
               <div class="box">
                 <article class="media">
                   <div class="media-left">
