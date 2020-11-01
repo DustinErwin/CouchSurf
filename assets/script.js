@@ -73,6 +73,13 @@ $(".saveVideo").on("click", function () {
   displaySavedVideos(); //updates saved videos on screen everytime button is clicked
 });
 
+//Button that deletes saved Videos
+deleteSaves = $(".deleteSaves");
+deleteSaves.on("click", function () {
+  localStorage.removeItem("savedVideoList"); //removes saved videos from local storage
+  displaySavedVideos(); //displays saved videos (in this case, deletes them)
+});
+
 // //news api section
 // gNewsApiKey = "c5a54deae1f487f4cb1dc7a4c62630cd";
 // newsOptions = $(".newsOptions").val();
