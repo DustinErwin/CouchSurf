@@ -20,15 +20,24 @@ function displaySavedVideos() {
   videosDiv = $(".savedVideos");
   videosDiv.empty();
   savedVideoList = JSON.parse(localStorage.getItem("savedVideoList"));
-  console.log(savedVideoList);
   if (savedVideoList != null) {
     for (i = 0; i < savedVideoList.length; i++) {
       pTag = $("<p>");
       pTag.text(savedVideoList[i].items[0].snippet.title);
+      pTag.attr('id',savedVideoList[i].items[0].id)
       videosDiv.append(pTag);
+      //creates dynamic onClick that changes video on screen
+      pTag.on('click',function(){
+        videoPlayer.attr(
+          "src",
+          `https://www.youtube.com/embed/${$(this).attr('id')}`
+        );
+      })
     }
   }
 }
+
+
 function getVideoData() {
   let category = videoOption.val();
   $.ajax({
@@ -65,11 +74,12 @@ $(".saveVideo").on("click", function () {
   //grabs the current video data
   youtubeSavedVideo = JSON.parse(localStorage.getItem("currentYoutubeVideo"));
   //grabs current saved video array from local storage
-
+  videoArray = JSON.parse(localStorage.getItem("savedVideoList"))
   //adds current video to set storage array
   videoArray.push(youtubeSavedVideo);
   //sets storage array back in local storage
   localStorage.setItem("savedVideoList", JSON.stringify(videoArray));
+ 
   displaySavedVideos(); //updates saved videos on screen everytime button is clicked
 });
 
