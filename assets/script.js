@@ -9,7 +9,6 @@ let testVideoLink = "https://www.youtube.com/embed/4H2lnt3QkyA";
 let videoPlayer = $("#videoPlayer");
 let videoArray;
 if (videoArray == null) videoArray = []; //creates an array for local storage if it doesn't yet exist
-
 if (videoArray != []) {
   //stops a bug when D.S.V() tries to run without a value
   displaySavedVideos();
@@ -24,19 +23,18 @@ function displaySavedVideos() {
     for (i = 0; i < savedVideoList.length; i++) {
       pTag = $("<p>");
       pTag.text(savedVideoList[i].items[0].snippet.title);
-      pTag.attr('id',savedVideoList[i].items[0].id)
+      pTag.attr("id", savedVideoList[i].items[0].id);
       videosDiv.append(pTag);
       //creates dynamic onClick that changes video on screen
-      pTag.on('click',function(){
+      pTag.on("click", function () {
         videoPlayer.attr(
           "src",
-          `https://www.youtube.com/embed/${$(this).attr('id')}`
+          `https://www.youtube.com/embed/${$(this).attr("id")}`
         );
-      })
+      });
     }
   }
 }
-
 
 function getVideoData() {
   let category = videoOption.val();
@@ -68,19 +66,26 @@ function getVideoData() {
 videoSelectBtn.on("click", function () {
   getVideoData();
 });
-
 //Youtube Save Video for Later
 $(".saveVideo").on("click", function () {
-  //grabs the current video data
-  youtubeSavedVideo = JSON.parse(localStorage.getItem("currentYoutubeVideo"));
-  //grabs current saved video array from local storage
-  videoArray = JSON.parse(localStorage.getItem("savedVideoList"))
-  //adds current video to set storage array
-  videoArray.push(youtubeSavedVideo);
-  //sets storage array back in local storage
+  //if there is local storage, videoArray grabs that list and adds current video, then sets to local storage
+  if (JSON.parse(localStorage.getItem("savedVideoList") !== null)) {
+    videoArray = [];
+    let currentVideos = JSON.parse(localStorage.getItem("savedVideoList"));
+    //adds each saved item in local storage to videoArray
+    for (i = 0; i < currentVideos.length; i++) {
+      videoArray.push(currentVideos[i]);
+    }
+    //adds current video to beginning of array
+    videoArray.unshift(JSON.parse(localStorage.getItem("currentYoutubeVideo")));
+  }
+  //if no local storage, videoArray only adds currentvideo, then sets to local storage
+  else {
+    videoArray = [];
+    videoArray.push(JSON.parse(localStorage.getItem("currentYoutubeVideo")));
+  }
   localStorage.setItem("savedVideoList", JSON.stringify(videoArray));
- 
-  displaySavedVideos(); //updates saved videos on screen everytime button is clicked
+  displaySavedVideos();
 });
 
 //Button that deletes saved Videos
