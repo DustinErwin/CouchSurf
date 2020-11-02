@@ -10,8 +10,8 @@
    
     />
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./assets/favicon_io/favicon_io(1)/favicon-16x16.png" type="image/xcon">
-    <link rel="stylesheet" href="./assets/favicon_io(1)/style.css">
+    <link rel="shortcut icon" href="/ui-assets/favicon_io(1)/favicon-16x16.png" type="image/xcon">
+    <link rel="stylesheet" href="/ui-assets/favicon_io(1)/style.css">
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'> </script>
 
 
@@ -23,7 +23,7 @@
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
           <img
-            src="./CouchSurf(2).png"
+            src="/ui-assets/CouchSurf(2).png"
             style="max-height: 60px;"
             class="py-2 px-2"
           />
@@ -31,6 +31,38 @@
       </div>
       <div class="navbar-menu" id="nav-links">
         <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="dropdown">
+              <div class="dropdown-trigger">
+                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <span>Theme</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item">
+                    Dropdown item
+                  </a>
+                  <a class="dropdown-item">
+                    Other dropdown item
+                  </a>
+                  <a href="#" class="dropdown-item is-active">
+                    Active dropdown item
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Other dropdown item
+                  </a>
+                  <hr class="dropdown-divider">
+                  <a href="#" class="dropdown-item">
+                    With a divider
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>         
           <a href="" class="navbar-item">My Account</a>
           <a href="" class="navbar-item">About Us</a>
         </div>
@@ -61,123 +93,18 @@
     <div class="container">
 
         <div class="columns is-3">
-            <div class="column">
-              First column
-              <div class="box">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img
-                      src="./assets/images/Re-Wire.gif"
-                      alt="Placeholder image"
-                    />
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-left">
-                    </div>
-                    <div class="media-content">
-                      <p class="title is-4">Re Wire</p>
-                      <p class="subtitle is-6">by: Jan Mankopf</p>
-                    </div>
-                  </div>
-      
-                  <div class="content">
-                    <br>
-                    An amazingly fun puzzle game where your job is to reconnect
-                    the wire to the socket. All coded in one html document!
-                     <br>
-                     <br> 
-                     
-                     
-                     <button class='social'><a href='https://github.com/JMankopf/js13k-rewire'><img src="./assets/images/GitHub.png" alt=""></a></button>
-                     <button class='social'><a href="https://twitter.com/intent/tweet?text=Check%20out%20Re-Wire%20-%20%23js13k%20entry%20by%20Jan%20Mankopf%20for%20the%20%40js13kGames%202018%20competition!&url=https%3A%2F%2Fjs13kgames.com/entries/re-wire"><img src="./assets/images/button-twitter.png" alt=""></a></button>
-                     <button class='social'><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjs13kgames.com/entries/re-wire"><img src="./assets/images/button-facebook.png" alt=""></a>
-                    </button>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="card mb-4">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img
-                      src="./assets/images/Everyone's Sky.gif"
-                      alt="GIF of Everyone's Sky"
-                    />
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-left">
-                      
-                    </div>
-                    <div class="media-content">
-                      <p class="title is-4">Everyone's Sky</p>
-                      <p class="subtitle is-6">by Rémi Vansteelandt</p>
-                    </div>
-                  </div>
-      
-                  <div class="content">
-                    Bring peace to the galaxy... or war?
-
-                    Make allies by completing missions, study other planets, stars, defend yourself against planetary defenses 
-                    and pirate groups, or makes enemies by attacking them, ignoring their communications and destroying their 
-                    facilities.
-                    <br>
-                    
-                    <br />
-                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img
-                      src="https://bulma.io/images/placeholders/1280x960.png"
-                      alt="Placeholder image"
-                    />
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-left">
-                      <figure class="image is-48x48">
-                        <img
-                          src="https://bulma.io/images/placeholders/96x96.png"
-                          alt="Placeholder image"
-                        />
-                      </figure>
-                    </div>
-                    <div class="media-content">
-                      <p class="title is-4">John Smith</p>
-                      <p class="subtitle is-6">@johnsmith</p>
-                    </div>
-                  </div>
-      
-                  <div class="content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                    nec iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
-                    <a href="#">#responsive</a>
-                    <br />
-                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                  </div>
-                </div>
-              </div>
-            </div>
+          
+            
             <!-- Second Column-->
             <div class="column ">
-              Second column
-              <!-- 1sbox -->
+              <!-- 1st Box -->
               <div class="box">
                 <article class="media">
                   <div class="media-content">
                     <div class="content">
                         <nav class="navbar">
                           <div class="navbar-start">
-                            <p class="navbar-item">News</p>
+                            <h2 class="navbar-item title is-2">Youtube Surf</h2>
                           </div>
                           <div class="navbar-end">
                             <div class="navbar-item">
@@ -185,65 +112,116 @@
                             </div>                            
                           </div>
                         </nav>
-                        <ul class="list">
-                          <li class="naked"><a href="#">Woah this happend!</a></li>
-                          <li class="naked"><a href="#">Woah this happend!</a></li>
-                          <li class="naked"><a href="#">Woah this happend!</a></li>
-                          <li class="naked"><a href="#">Woah this happend!</a></li>
-                          <li class="naked"><a href="#">Woah this happend!</a></li>
-                        </ul>
+                        <p class="subtitle">Top videos in popular catagories</p>
+                        <div class="select">
+                          <select class="test videoOptions">
+                            <!--category values are youtube category ids. Used in JS to grab that category-->
+                            <option>Select Catagory</option>
+                            <option class="musicOption" value="10">Music</option>
+                            <option class="sportsOption" value="17">Sports</option>
+                            <option class="gameingOption" value="20">Gaming</option>
+                            <option class="scienceTechOption" value="28">Science & Tech</option>
+                            <option class="howToOption" value="26">How to</option>
+                          </select>
+                          <br />
+                        </div>
+                        <button type="button" class="signInBtn button is-primary">Go!</button>
+                        <br />
+                        <iframe
+                          id="videoPlayer"
+                          width="560"
+                          height="315"
+                          src="https://gettravel.com/wp-content/uploads/2018/04/Video-Placeholder.jpg"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen
+                        ></iframe>
                     </div>              
                   </div>
                 </article>
               </div>
+              <!--Second Box-->
               <div class="box">
-                <article class="media">
-                  <div class="media-left">
-                    <figure class="image is-64x64">
-                      <img
-                        src="https://bulma.io/images/placeholders/128x128.png"
-                        alt="Image"
-                      />
-                    </figure>
-                  </div>
-                  <div class="media-content">
+                  <div class="media-content">          
                     <div class="content">
-                      <p>
-                        <strong>John Smith</strong> <small>@johnsmith</small>
-                        <small>31m</small>
-                        <br />
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenean efficitur sit amet massa fringilla egestas. Nullam
-                        condimentum luctus turpis.
-                      </p>
-                    </div>
-                    <nav class="level is-mobile">
-                      <div class="level-left">
-                        <a class="level-item" aria-label="reply">
-                          <span class="icon is-small">
-                            <i class="fas fa-reply" aria-hidden="true"></i>
-                          </span>
-                        </a>
-                        <a class="level-item" aria-label="retweet">
-                          <span class="icon is-small">
-                            <i class="fas fa-retweet" aria-hidden="true"></i>
-                          </span>
-                        </a>
-                        <a class="level-item" aria-label="like">
-                          <span class="icon is-small">
-                            <i class="fas fa-heart" aria-hidden="true"></i>
-                          </span>
-                        </a>
+                      <nav class="navbar">
+                        <div class="navbar-start">
+                          <h2 class="navbar-item title is-2">Games</h2>
+                        </div>
+                        <div class="navbar-end">
+                          <div class="navbar-item">
+                            <button class="button is-small is-white ">Close</button>
+                          </div>                            
+                        </div>
+                      </nav>
+                      <div class="level">
+                        <div class="level-left">
+                          <div class="level-item">                                                    
+                            <p class="is-size-4 media-left">CouchSurf: COVID </p>
+                          </div>
+                        </div>
+                        <div>
+                          <img src="./assets/images/" alt="">
+                        </div>
+                        <div class="level-right">
+                          <div class="level-item">
+                            <img src="./assets/images/Couch Covid Blasters.gif" alt="" style='height: 8em; width: 15em;'>
+                            <a href="./assets/Games/couchSurfer/index.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                          </div>
+                        </div>
                       </div>
-                    </nav>
+                      <div class="level">
+                        <div class="level-left">
+                          <div class="level-item">                                                    
+                            <p class="is-size-4 media-left">Everyone's Sky</p>
+                            
+                          </div>
+                          
+                        </div>
+                        
+                        <div class="level-right">
+                          <div class="level-item">
+                            <img src="./assets/images/Everyone's Sky.gif" alt="" style='height: 8em; width: 15em;'>
+                            <a href="./assets/Games/EveryoneSky.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                          </div>
+                        </div>
+                      </div> 
+                      <div class="level">
+                        <div class="level-left">
+                          <div class="level-item">                                                    
+                            <p class="is-size-4 media-left">Ninja VS Evil</p>
+                          </div>
+                        </div>
+                        <div class="level-right">
+                          <div class="level-item">
+                            <img src="./assets/images/Ninja vs EVILCORP.gif" alt="" style='height: 8em; width: 15em;'>
+                            <a href="./assets/Games/NinjavsEvil.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                          </div>
+                        </div>
+                      </div>  
+                      <div class="level">
+                        <div class="level-left">
+                          <div class="level-item">                                                    
+                            <p class="is-size-4 media-left">ReWire</p>
+                          </div>
+                          
+                        </div>
+                        <div class="level-right">
+                          <div class="level-item">
+                            <img src="./assets/images/Re-Wire.gif" alt="" style='height: 8em; width: 15em;'>
+                            <a href="./assets/Games/ReWire.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                          </div>
+                        </div>
+                      </div>                                           
+                    </div>        
                   </div>
                 </article>
               </div>
             </div>
           
-      
+      <!--Second Column-->
             <div class="column">
-              Third column
+              <!--First Box-->
               <div class="card">
                 <div class="card-content">
                   <p class="title">
@@ -268,7 +246,9 @@
                 </footer>
               </div>
             </div>
-            <div class="column">Fourth column
+          <!--Third Column-->
+            <div class="column">
+              <!--Second Box-->
                 <div class="box">
                     <article class="media">
                       <div class="media-left">
@@ -312,6 +292,7 @@
                       </div>
                     </article>
                   </div>
+                <!--Second Box-->
                   <div class="box">
                     <article class="media">
                       <div class="media-left">
@@ -359,41 +340,6 @@
           
             </div>
           </div>
-
-<!--Youtube Player Section-->
-<box>
-  <h2 class="title is-2">Youtube Surf</h2>
-  <p class="subtitle">Top videos in popular catagories</p>
-  <div class="select">
-    <select class="test videoOptions">
-      <!--category values are youtube category ids. Used in JS to grab that category-->
-      <option>Select Catagory</option>
-      <option class="musicOption" value="10">Music</option>
-      <option class="sportsOption" value="17">Sports</option>
-      <option class="gameingOption" value="20">Gaming</option>
-      <option class="scienceTechOption" value="28">Science & Tech</option>
-      <option class="howToOption" value="26">How to</option>
-    </select>
-    <br />
-  </div>
-  <button type="button" class="signInBtn button is-primary">Go!</button>
-  <br />
-  <iframe
-    id="videoPlayer"
-    width="560"
-    height="315"
-    src="https://gettravel.com/wp-content/uploads/2018/04/Video-Placeholder.jpg"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <!--End Youtube Player Section-->
-</box>
-
-
-
-
-
     </div>
     <script src = 'assets/script.js'></script> 
   </body>
