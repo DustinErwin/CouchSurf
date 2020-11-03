@@ -7,12 +7,10 @@ let data = "";
 let videoSelectBtn = $(".videoSelectBtn");
 let testVideoLink = "https://www.youtube.com/embed/4H2lnt3QkyA";
 let videoPlayer = $("#videoPlayer");
-let videoArray;
-if (videoArray == null) videoArray = []; //creates an array for local storage if it doesn't yet exist
-if (videoArray != []) {
-  //stops a bug when D.S.V() tries to run without a value
-  displaySavedVideos();
-}
+
+//displays current videos and articles saved in local storage
+displaySavedVideos();
+displaySavedArticles();
 
 function displaySavedVideos() {
   videosDiv = $(".savedVideos");
@@ -156,14 +154,17 @@ function displayCurrentArticles() {
 
 //grabs save Article Button
 saveArticleBtn = $(".saveArticle");
-currentNewsArticle = saveArticleBtn.on("click", function () {
+
+currentNewsArticle = [];
+
+saveArticleBtn.on("click", function () {
   //if there is local storage, newsArray grabs that list and adds current Article, then sets to local storage
   if (JSON.parse(localStorage.getItem("savedArticleList") !== null)) {
-    tempArticleArray = [];
+    currentNewsArticle = [];
     let savedArticleList = JSON.parse(localStorage.getItem("savedArticleList"));
     //adds each saved item in local storage to currentNewsArticle
     for (i = 0; i < savedArticleList.length; i++) {
-      tempArticleArray.push(savedArticleList[i]);
+      currentNewsArticle.push(savedArticleList[i]);
     }
     //adds current video to beginning of array
     currentNewsArticle.unshift(
@@ -178,5 +179,33 @@ currentNewsArticle = saveArticleBtn.on("click", function () {
     );
   }
   localStorage.setItem("savedArticleList", JSON.stringify(currentNewsArticle));
-  displaySavedVideos();
+  displaySavedArticles();
+});
+
+//displays saved articles from local storage
+function displaySavedArticles() {
+  savedArticlesDiv = $(".savedArticlesDiv");
+  savedArticlesDiv.empty();
+  savedArticleList = JSON.parse(localStorage.getItem("savedArticleList"));
+  if (savedArticleList != null) {
+    for (i = 0; i < savedArticleList.length; i++) {
+      pTag = $("<p>");
+      pTag.attr("href");
+      pTag.text(
+        `title: ${savedArticleList[i].articles[0].title} source:  ${savedArticleList[i].articles[0].source.name}`
+      );
+      savedArticlesDiv.append(pTag);
+      //creates dynamic onClick that changes video on screen
+      pTag.on("click", function () {
+        videoPlayer.attr();
+      });
+    }
+  }
+}
+
+//Button that deletes saved Articles
+deleteNewsBtn = $(".deleteNewsBtn");
+deleteNewsBtn.on("click", function () {
+  localStorage.removeItem("savedArticleList");
+  displaySavedArticles(); //displays saved videos (in this case, deletes them)
 });
