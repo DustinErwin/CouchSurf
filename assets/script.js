@@ -14,7 +14,6 @@ if (videoArray != []) {
   displaySavedVideos();
 }
 
-//grabs local storage and diplays saved videos on screen
 function displaySavedVideos() {
   videosDiv = $(".savedVideos");
   videosDiv.empty();
@@ -101,34 +100,7 @@ deleteSaves.on("click", function () {
 gNewsApiKey = "c5a54deae1f487f4cb1dc7a4c62630cd";
 newsSelectBtn = $(".newsSelectBtn");
 
-//grabs the data from local storage based on current selected article and displays it.
-function displayCurrentArticles() {
-  currentArticleTitle = $(".currentArticleTitle");
-  currentArticle = JSON.parse(localStorage.getItem("currentNewsArticle"));
-  currentNewsImage = $(".currentNewsImage");
-  currentArticleContent = $(".currentArticleContent");
-  currentArticleSource = $(".currentArticleSource");
-  //creates tags
-  titleTag = $("<h2>");
-  descriptionTag = $("<p>");
-  sourceNameTag = $("<p>");
-  sourceUrlTag = $("<a>");
-
-  titleTag.text(currentArticle.articles[0].title);
-  currentArticleTitle.append(titleTag);
-  // change news image
-  currentNewsImage.attr("src", currentArticle.articles[0].image);
-  //append news content below image
-  descriptionTag.text(currentArticle.articles[0].description);
-  currentArticleContent.append(descriptionTag);
-  //append news source
-  sourceNameTag.text(currentArticle.articles[0].source.name);
-  currentArticleSource.append(sourceNameTag);
-  //appends source URL Link
-  sourceUrlTag.text(currentArticle.articles[0].source.source);
-  currentArticleContent.append(sourceUrlTag);
-}
-
+test = JSON.parse(localStorage.getItem("currentNewsArticle"));
 newsSelectBtn.on("click", function () {
   let newsCategory = $(".newsOptions").val();
   $.ajax({
@@ -147,4 +119,64 @@ newsSelectBtn.on("click", function () {
       console.log("Request Failed");
     },
   });
+});
+
+//grabs the data from local storage based on current selected article and displays it.
+function displayCurrentArticles() {
+  //assign HTML elememts
+  currentArticleTitle = $(".currentArticleTitle");
+  currentArticle = JSON.parse(localStorage.getItem("currentNewsArticle"));
+  currentNewsImage = $(".currentNewsImage");
+  currentArticleContent = $(".currentArticleContent");
+  currentArticleSource = $(".currentArticleSource");
+  newsContainer = $(".newsContainer");
+
+  //Empties previous content
+  newsContainer.empty();
+
+  //creates tags
+  titleTag = $("<h2>");
+  imageTag = $("<img />");
+  descriptionTag = $("<p>");
+  sourceTag = $("<a>");
+  titleTag.text(currentArticle.articles[0].title);
+  newsContainer.append(titleTag);
+  // appends News Image
+  imageTag.attr("width", "480");
+  imageTag.attr("src", currentArticle.articles[0].image);
+  newsContainer.append(imageTag);
+  //append news content below image
+  descriptionTag.text(currentArticle.articles[0].description);
+  newsContainer.append(descriptionTag);
+  //append news source
+  sourceTag.text("source" + currentArticle.articles[0].source.name);
+  sourceTag.attr("href", currentArticle.articles[0].source.url);
+  newsContainer.append(sourceTag);
+}
+
+//grabs save Article Button
+saveArticleBtn = $(".saveArticle");
+currentNewsArticle = saveArticleBtn.on("click", function () {
+  //if there is local storage, newsArray grabs that list and adds current Article, then sets to local storage
+  if (JSON.parse(localStorage.getItem("savedArticleList") !== null)) {
+    tempArticleArray = [];
+    let savedArticleList = JSON.parse(localStorage.getItem("savedArticleList"));
+    //adds each saved item in local storage to currentNewsArticle
+    for (i = 0; i < savedArticleList.length; i++) {
+      tempArticleArray.push(savedArticleList[i]);
+    }
+    //adds current video to beginning of array
+    currentNewsArticle.unshift(
+      JSON.parse(localStorage.getItem("currentNewsArticle"))
+    );
+  }
+  //if no local storage, currentNewsArticle only adds currentvideo, then sets to local storage
+  else {
+    currentNewsArticle = [];
+    currentNewsArticle.push(
+      JSON.parse(localStorage.getItem("currentNewsArticle"))
+    );
+  }
+  localStorage.setItem("savedArticleList", JSON.stringify(currentNewsArticle));
+  displaySavedVideos();
 });
