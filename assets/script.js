@@ -66,6 +66,7 @@ function getVideoData() {
 videoSelectBtn.on("click", function () {
   getVideoData();
 });
+
 //Youtube Save Video for Later
 $(".saveVideo").on("click", function () {
   //if there is local storage, videoArray grabs that list and adds current video, then sets to local storage
@@ -91,26 +92,59 @@ $(".saveVideo").on("click", function () {
 //Button that deletes saved Videos
 deleteSaves = $(".deleteSaves");
 deleteSaves.on("click", function () {
-  localStorage.removeItem("savedVideoList"); //removes saved videos from local storage
+  localStorage.removeItem("savedVideoList");
   displaySavedVideos(); //displays saved videos (in this case, deletes them)
 });
 
-// //news api section
-// gNewsApiKey = "c5a54deae1f487f4cb1dc7a4c62630cd";
-// newsOptions = $(".newsOptions").val();
-// newsSelectBtn = $(".newsSelectBtn");
+//news api section
 
-// newsSelectBtn.on("click", function () {
-//   $.ajax({
-//     url:
-//       "https://gnews.io/api/v4/top-headlines?token=" +
-//       gNewsApiKey +
-//       "&max=3&lang=en&topic=" +
-//       newsOptions,
-//     type: "GET",
-//     success: function (data) {},
-//     error: function () {
-//       console.log("Request Failed");
-//     },
-//   });
-// });
+gNewsApiKey = "c5a54deae1f487f4cb1dc7a4c62630cd";
+newsSelectBtn = $(".newsSelectBtn");
+
+//grabs the data from local storage based on current selected article and displays it.
+function displayCurrentArticles() {
+  currentArticleTitle = $(".currentArticleTitle");
+  currentArticle = JSON.parse(localStorage.getItem("currentNewsArticle"));
+  currentNewsImage = $(".currentNewsImage");
+  currentArticleContent = $(".currentArticleContent");
+  currentArticleSource = $(".currentArticleSource");
+  //creates tags
+  titleTag = $("<h2>");
+  descriptionTag = $("<p>");
+  sourceNameTag = $("<p>");
+  sourceUrlTag = $("<a>");
+
+  titleTag.text(currentArticle.articles[0].title);
+  currentArticleTitle.append(titleTag);
+  // change news image
+  currentNewsImage.attr("src", currentArticle.articles[0].image);
+  //append news content below image
+  descriptionTag.text(currentArticle.articles[0].description);
+  currentArticleContent.append(descriptionTag);
+  //append news source
+  sourceNameTag.text(currentArticle.articles[0].source.name);
+  currentArticleSource.append(sourceNameTag);
+  //appends source URL Link
+  sourceUrlTag.text(currentArticle.articles[0].source.source);
+  currentArticleContent.append(sourceUrlTag);
+}
+
+newsSelectBtn.on("click", function () {
+  let newsCategory = $(".newsOptions").val();
+  $.ajax({
+    url:
+      "https://gnews.io/api/v4/top-headlines?token=" +
+      gNewsApiKey +
+      "&max=1&lang=en&q=" +
+      newsCategory +
+      "&country=us",
+    type: "GET",
+    success: function (data) {
+      localStorage.setItem("currentNewsArticle", JSON.stringify(data));
+      displayCurrentArticles();
+    },
+    error: function () {
+      console.log("Request Failed");
+    },
+  });
+});
