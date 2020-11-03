@@ -1,3 +1,5 @@
+let rst = document.querySelector('#resetBtn')
+
 document.addEventListener('DOMContentLoaded', () => {
     const squares = document.querySelectorAll('.grid div')
     const resultDisplay = document.querySelector('#result')
@@ -120,5 +122,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   
+    rst.addEventListener('click', reset)
+    function reset() {
+      window.location.href='index.html'
+    }
+    
+
+
     document.addEventListener('keyup', shoot)
+    
   })
