@@ -98,15 +98,19 @@ deleteSaves.on("click", function () {
 gNewsApiKey = "c5a54deae1f487f4cb1dc7a4c62630cd";
 newsSelectBtn = $(".newsSelectBtn");
 
-test = JSON.parse(localStorage.getItem("currentNewsArticle"));
+
+
+
 newsSelectBtn.on("click", function () {
-  let newsCategory = $(".newsOptions").val();
+  let newsOptions = $(".newsOptions").val();
+  console.log(newsOptions)
+
   $.ajax({
     url:
       "https://gnews.io/api/v4/top-headlines?token=" +
       gNewsApiKey +
       "&max=1&lang=en&q=" +
-      newsCategory +
+      newsOptions +
       "&country=us",
     type: "GET",
     success: function (data) {
@@ -147,7 +151,7 @@ function displayCurrentArticles() {
   descriptionTag.text(currentArticle.articles[0].description);
   newsContainer.append(descriptionTag);
   //append news source
-  sourceTag.text("source" + currentArticle.articles[0].source.name);
+  sourceTag.text("Source: " + currentArticle.articles[0].source.name);
   sourceTag.attr("href", currentArticle.articles[0].source.url);
   newsContainer.append(sourceTag);
 }
@@ -187,17 +191,47 @@ function displaySavedArticles() {
   savedArticlesDiv = $(".savedArticlesDiv");
   savedArticlesDiv.empty();
   savedArticleList = JSON.parse(localStorage.getItem("savedArticleList"));
+
   if (savedArticleList != null) {
     for (i = 0; i < savedArticleList.length; i++) {
       pTag = $("<p>");
       pTag.attr("href");
       pTag.text(
-        `title: ${savedArticleList[i].articles[0].title} source:  ${savedArticleList[i].articles[0].source.name}`
+        `${savedArticleList[i].articles[0].title} (${savedArticleList[i].articles[0].source.name})`
       );
+      pTag.val(savedArticleList[i].articles[0].title);
       savedArticlesDiv.append(pTag);
-      //creates dynamic onClick that changes video on screen
+
+      //Clicking on a title changes news on screen to selected title info
       pTag.on("click", function () {
-        videoPlayer.attr();
+        for (i = 0; i < savedArticleList.length; i++) {
+          if ($(this).val() === savedArticleList[i].articles[0].title) {
+            //Grab News Container
+            newsContainer = $(".newsContainer");
+            //empties news container
+            newsContainer.empty();
+            //creates tags
+            titleTag = $("<h2>");
+            imageTag = $("<img />");
+            descriptionTag = $("<p>");
+            sourceTag = $("<a>");
+            titleTag.text(savedArticleList[i].articles[0].title);
+            newsContainer.append(titleTag);
+            // appends News Image
+            imageTag.attr("width", "480");
+            imageTag.attr("src", savedArticleList[i].articles[0].image);
+            newsContainer.append(imageTag);
+            //append news content below image
+            descriptionTag.text(savedArticleList[i].articles[0].description);
+            newsContainer.append(descriptionTag);
+            //append news source
+            sourceTag.text(
+              "source" + savedArticleList[i].articles[0].source.name
+            );
+            sourceTag.attr("href", savedArticleList[i].articles[0].source.url);
+            newsContainer.append(sourceTag);
+          }
+        }
       });
     }
   }

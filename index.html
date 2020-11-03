@@ -398,21 +398,10 @@
 <box>
   <h2 class="title is-2">News Surf</h2>
   <p class="subtitle">Top news in popular catagories</p>
-  <div class="select">
-    <select class="test newsOptions">
-      <!--category values are youtube category ids. Used in JS to grab that category-->
-      <option>Select Catagory</option>
-      <option class="musicOption" value="Breaking News">Breaking News</option>
-      <option class="sportsOption" value="Business">Business</option>
-      <option class="gameingOption" value="Technology">Technology</option>
-      <option class="scienceTechOption" value="Entertainment">Entertainment</option>
-      <option class="howToOption" value="Sports">Sports</option>
-      <option class="howToOption" value="Science">Science</option>
-      <option class="howToOption" value="Health">Health</option>
-    </select>
-    <br />
+  <input class="input newsOptions" type="text" placeholder="Text input" style="width:8%">
   </div>
-  <button type="button" class="newsSelectBtn button is-primary">Surf!</button>
+  
+  <button type="button" class="newsSelectBtn button is-primary" >Surf!</button>
   <br />
   <div class="newsContainer"><!--Container for all things News! -->
 
