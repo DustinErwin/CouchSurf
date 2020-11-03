@@ -9,9 +9,15 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
    
     />
+<<<<<<< Updated upstream
     
     <link rel="shortcut icon" href="./assets/favicon_io/favicon_io(1)/favicon-16x16.png" type="image/xcon">
     <link rel="stylesheet" href="./assets/favicon_io(1)/style.css">
+=======
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="/ui-assets/favicon_io(1)/favicon-16x16.png" type="image/xcon">
+    <link rel="stylesheet" href="/ui-assets/favicon_io(1)/style.css">
+>>>>>>> Stashed changes
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'> </script>
 
 
@@ -186,6 +192,7 @@
                             </div>                            
                           </div>
                         </nav>
+<<<<<<< Updated upstream
                         <ul class="list">
                           <li class="naked"><a href="#">Woah this happend!</a></li>
                           <li class="naked"><a href="#">Woah this happend!</a></li>
@@ -193,6 +200,32 @@
                           <li class="naked"><a href="#">Woah this happend!</a></li>
                           <li class="naked"><a href="#">Woah this happend!</a></li>
                         </ul>
+=======
+                        <p class="subtitle">Top videos in popular catagories</p>
+                        <div class="select">
+                          <select class="test videoOptions">
+                            <!--category values are youtube category ids. Used in JS to grab that category-->
+                            <option>Select Catagory</option>
+                            <option class="musicOption" value="10">Music</option>
+                            <option class="sportsOption" value="17">Sports</option>
+                            <option class="gameingOption" value="20">Gaming</option>
+                            <option class="scienceTechOption" value="28">Science & Tech</option>
+                            <option class="howToOption" value="26">How to</option>
+                          </select>
+                          <br />
+                        </div>
+                        <button type="button" class="signInBtn button is-primary" id="gobutton">Go!</button>
+                        <br />
+                        <iframe
+                          id="videoPlayer"
+                          width="560"
+                          height="315"
+                          src="https://gettravel.com/wp-content/uploads/2018/04/Video-Placeholder.jpg"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen
+                        ></iframe>
+>>>>>>> Stashed changes
                     </div>              
                   </div>
                 </article>
@@ -269,7 +302,44 @@
                 </footer>
               </div>
             </div>
+<<<<<<< Updated upstream
             <div class="column">Fourth column
+=======
+          <!--Third Column-->
+            <div class="column">
+              <!-- Weather box -->
+              <div class = "box">
+                <nav class="navbar">
+                  <div class="navbar-start">
+                    <h2 class="navbar-item title is-2">Weather</h2>
+                  </div>
+                  <div class="navbar-end">
+                    <div class="navbar-item">
+                      <button class="button is-small is-white ">Close</button>
+                    </div>                            
+                  </div>
+                </nav>
+                <div class = "columns is-2">
+            
+                  <div class = "column">
+                  
+                    <h5 id="currentCity"></h5>
+                    <h4 id="weatherDate"></h4>
+
+                  </div>
+                  <div class = "column" id = "currentConditions">
+                    
+                  </div>
+                </div>
+               
+                <div class = "columns is-5" id="forecast">
+                  
+              
+                  
+                </div>
+              </div>
+              <!--Second Box-->
+>>>>>>> Stashed changes
                 <div class="box">
                     <article class="media">
                       <div class="media-left">
@@ -397,5 +467,6 @@
 
     </div>
     <script src = 'assets/script.js'></script> 
+    <script src = 'assets/weather.js'></script> 
   </body>
   </html>
