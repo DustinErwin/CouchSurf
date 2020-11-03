@@ -157,5 +157,8 @@ function displayForecast () {
   });
 
 }
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
