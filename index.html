@@ -14,9 +14,6 @@
     <link rel="stylesheet" href="/ui-assets/favicon_io(1)/style.css">
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'> </script>
 
-
-
-
   </head>
   <body>
     <nav class="navbar has-shadow">
@@ -60,7 +57,7 @@
 
     <div class="container" style="max-width: 100%;">
       
-<<<<<<< Updated upstream
+
         <div class="columns">
           <!-- First Column -->
           <!-- Sidebar -->
@@ -88,7 +85,27 @@
                   <li><a id="newsSelect" class="dropdown-item title is-4">
                     News
                   </a></li>
-=======
+
+
+<!--
+      <div class="modal is-active">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Modal title</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+           Content ... 
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Save changes</button>
+          <button class="button">Cancel</button>
+        </footer>
+      </div>
+    </div>
+-->
+
 
 
 
@@ -106,7 +123,7 @@
                   <li><a href="#content">Content Checklist</a></li>
                   <li><a href="#technical">Technical SEO Checklist</a></li>
                   <li><a href="#link">Link Building Checklist</a></li>
->>>>>>> Stashed changes
+
                 </ul>
               </div>
 
@@ -144,7 +161,7 @@
                           </select>
                           <br />
                         </div>
-                        <button type="button" class="signInBtn button is-primary">Go!</button>
+                        <button type="button" class="videoSelectBtn button is-primary">Surf!</button>
                         <br />
                         <iframe
                           id="videoPlayer"
@@ -155,6 +172,10 @@
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowfullscreen
                         ></iframe>
+                        <br>
+                          <button type="button" class="saveVideo button is-primary">Save for Later</button>
+                          <button type="button" class="deleteSaves button is-primary">Delete Saved Videos</button>
+                          <div class="savedVideos"></div>
                     </div>              
                   </div>
                 </article>
@@ -271,6 +292,7 @@
             <div class="column">
               <!--Second Box-->
                 <div class="box">
+                  
                     <article class="media">
                       <div class="media-left">
                         <figure class="image is-64x64">
@@ -312,6 +334,29 @@
                         </nav>
                       </div>
                     </article>
+            <!--Top News Section-->
+                  
+                  <h2 class="title is-2">News Surf</h2>
+                  <p class="subtitle">Top news in popular catagories</p>
+                  <input class="input newsOptions" type="text" placeholder="Text input" style="width:8%">
+                  </div>
+                  
+                  <button type="button" class="newsSelectBtn button is-primary" >Surf!</button>
+                  <br />
+                  <div class="newsContainer"><!--Container for all things News! -->
+
+                <img src="https://keaganscastle.com/img/placeholders/news.png"
+                    width="480"
+                    height=""
+                  >
+
+                </div>
+                  <br>
+                <button type="button" class="saveArticle button is-primary">Save for Later</button>
+                  <button type="button" class="deleteNewsBtn button is-primary">Delete Saved Articles</button>
+                  <div class="savedArticlesDiv"></div>
+               
+
                   </div>
                 <!--Second Box-->
                   <div class="box">
@@ -362,6 +407,8 @@
             </div>
           </div>
     </div>
+
+    
     <script src = 'assets/script.js'></script> 
     <script src="./ui.js"></script>
   </body>
