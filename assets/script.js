@@ -98,12 +98,9 @@ deleteSaves.on("click", function () {
 gNewsApiKey = "c5a54deae1f487f4cb1dc7a4c62630cd";
 newsSelectBtn = $(".newsSelectBtn");
 
-
-
-
 newsSelectBtn.on("click", function () {
   let newsOptions = $(".newsOptions").val();
-  console.log(newsOptions)
+  console.log(newsOptions);
 
   $.ajax({
     url:

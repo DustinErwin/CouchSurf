@@ -1,0 +1,53 @@
+
+body
+{
+    background-color: rgb(173, 121, 8);
+}
+.score{
+    color: rgb(109, 216, 2);
+}
+.grid {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px rgb(196, 193, 193);
+    width: 750px;
+    height: 750px;
+    background-color: rgb(2, 2, 2);
+}
+
+.grid div {
+    width: 50px;
+    height: 50px;
+    
+}
+
+.couch {
+    background-image: url('./images/couch.jpg') ;
+    background-repeat: no-repeat ;
+    background-size: contain;
+}
+
+.covid { 
+    background-image: url('./images/covid.png');
+    background-size: cover;
+    
+}
+
+.boom {
+    background-image: url('./images/poof.jpg');
+    background-size: contain;
+}
+
+.laser {
+    background-image: url('./images/laser.png');
+    background-size: cover;
+    background-position: center;
+
+}
+#resetBtn{
+    background-color: rgb(109, 216, 2);
+    border: 2px solid grey;
+    border-radius: 5px;
+    width: 100px;
+}
