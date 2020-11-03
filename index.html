@@ -9,7 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
    
     />
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="shortcut icon" href="/ui-assets/favicon_io(1)/favicon-16x16.png" type="image/xcon">
     <link rel="stylesheet" href="/ui-assets/favicon_io(1)/style.css">
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'> </script>
@@ -43,18 +43,7 @@
               </div>
               <div class="dropdown-menu" id="dropdown-menu" role="menu">
                 <div class="dropdown-content">
-                  <a id="youtubeSurf" class="dropdown-item is-">
-                    Youtube Surf 
-                  </a>
-                  <a id="gameSelect" class="dropdown-item">
-                    Games 
-                  </a>
-                  <a id="weatherSelect" class="dropdown-item">
-                    Weather 
-                  </a>
-                  <a id="newsSelect" class="dropdown-item">
-                    News
-                  </a>
+                 
                 </div>
               </div>
             </div>
@@ -67,33 +56,44 @@
 
 
 
-=======
-<!--
-      <div class="modal is-active">
-      <div class="modal-background"></div>
-      <div class="modal-card">
-        <header class="modal-card-head">
-          <p class="modal-card-title">Modal title</p>
-          <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-           Content ... 
-        </section>
-        <footer class="modal-card-foot">
-          <button class="button is-success">Save changes</button>
-          <button class="button">Cancel</button>
-        </footer>
-      </div>
-    </div>
--->
+
+
+    <div class="container" style="max-width: 100%;">
+      
+        <div class="columns">
+          <!-- First Column -->
+          <!-- Sidebar -->
+            <div class="column">
+              <div class="menu sticky">	
+                <div class="media">
+                  <div class="media-content">
+                    <p  class="menu-label title is-3 pl-4 mt-3"><b>Widgets</b></p>
+
+                  </div>
+                  
+
+                </div>			
+                
+                <ul id="menu" class="menu-list">
+                  <li><a id="youtubeSurf" class="dropdown-item title is-4">
+                    Youtube Surf 
+                  </a></li>
+                  <li><a id="gameSelect" class="dropdown-item title is-4">
+                    Games 
+                  </a></li>
+                  <li><a id="weatherSelect" class="dropdown-item title is-4">
+                    Weather 
+                  </a></li>
+                  <li><a id="newsSelect" class="dropdown-item title is-4">
+                    News
+                  </a></li>
+                </ul>
+              </div>
+
+            </div>
 
 
 
-    <div class="container">
-
-        <div class="columns is-3">
-          
-            
             <!-- Second Column-->
             <div class="column ">
               <!-- 1st Box -->
@@ -156,32 +156,24 @@
                       <div class="level">
                         <div class="level-left">
                           <div class="level-item">                                                    
-                            <p class="is-size-4 media-left">CouchSurf: COVID </p>
+                            <p class="is-size-4 media-left">CouchSurf: Attack of COVID </p>
                           </div>
-                        </div>
-                        <div>
-                          <img src="./assets/images/" alt="">
                         </div>
                         <div class="level-right">
                           <div class="level-item">
-                            <img src="./assets/images/Couch Covid Blasters.gif" alt="" style='height: 8em; width: 15em;'>
-                            <a href="./assets/Games/couchSurfer/index.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                            <a href="/assets/Games/couchSurfer/index.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
                           </div>
                         </div>
                       </div>
                       <div class="level">
                         <div class="level-left">
                           <div class="level-item">                                                    
-                            <p class="is-size-4 media-left">Everyone's Sky</p>
-                            
+                            <p class="is-size-4 media-left">EveryoneSky</p>
                           </div>
-                          
                         </div>
-                        
                         <div class="level-right">
                           <div class="level-item">
-                            <img src="./assets/images/Everyone's Sky.gif" alt="" style='height: 8em; width: 15em;'>
-                            <a href="./assets/Games/EveryoneSky.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                            <a href="/assets/Games/EveryoneSky.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
                           </div>
                         </div>
                       </div> 
@@ -193,8 +185,7 @@
                         </div>
                         <div class="level-right">
                           <div class="level-item">
-                            <img src="./assets/images/Ninja vs EVILCORP.gif" alt="" style='height: 8em; width: 15em;'>
-                            <a href="./assets/Games/NinjavsEvil.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                            <a href="/assets/Games/NinjavsEvil.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
                           </div>
                         </div>
                       </div>  
@@ -203,15 +194,26 @@
                           <div class="level-item">                                                    
                             <p class="is-size-4 media-left">ReWire</p>
                           </div>
-                          
                         </div>
                         <div class="level-right">
                           <div class="level-item">
-                            <img src="./assets/images/Re-Wire.gif" alt="" style='height: 8em; width: 15em;'>
-                            <a href="./assets/Games/ReWire.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                            <a href="/assets/Games/ReWire.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
                           </div>
                         </div>
-                      </div>                                           
+                      </div> 
+                      <div class="level">
+                        <div class="level-left">
+                          <div class="level-item">                                                    
+                            <p class="is-size-4 media-left">ReWire</p>
+                          </div>
+                        </div>
+                        <div class="level-right">
+                          <div class="level-item">
+                            <a href="/assets/Games/ReWire.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                          </div>
+                        </div>
+                      </div>
+                      
                     </div>        
                   </div>
                 </article>
@@ -253,7 +255,7 @@
                       <div class="media-left">
                         <figure class="image is-64x64">
                           <img
-                            src="./assets/images/Re-Wire.gif"
+                            src="https://bulma.io/images/placeholders/128x128.png"
                             alt="Image"
                           />
                         </figure>
@@ -261,7 +263,7 @@
                       <div class="media-content">
                         <div class="content">
                           <p>
-                            <strong>Re Wire</strong> <small>Written by: Jan Mankopf</small>
+                            <strong>John Smith</strong> <small>@johnsmith</small>
                             <small>31m</small>
                             <br />
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
