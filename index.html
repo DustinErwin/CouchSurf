@@ -8,9 +8,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" 
     />
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="shortcut icon" href="/ui-assets/favicon_io(1)/favicon-16x16.png" type="image/xcon">
-    <link rel="stylesheet" href="/ui-assets/favicon_io(1)/style.css">
+
+
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="shortcut icon" href="./ui-assets/favicon_io(1)/favicon-16x16.png" type="image/xcon">
+    <link rel="stylesheet" href="./ui-assets/favicon_io(1)/style.css">
+
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'> </script>
   </head>
 
@@ -19,7 +22,7 @@
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
           <img
-            src="/ui-assets/CouchSurf(2).png"
+            src="./ui-assets/CouchSurf(2).png"
             style="max-height: 60px;"
             class="py-2 px-2"
           />
@@ -206,8 +209,20 @@
                             <a href="/assets/Games/ReWire.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
                           </div>
                         </div>
-                      </div>
-                      
+                      </div> 
+                      <div class="level">
+                        <div class="level-left">
+                          <div class="level-item">                                                    
+                            <p class="is-size-4 media-left">Off the Line</p>
+                          </div>
+                        </div>
+                        <div class="level-right">
+                          <div class="level-item">
+                            <img src="./assets/images/Off The Line.gif" alt="" style='height: 8em; width: 15em;'>
+                            <a href="./assets/Games/offLine.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                          </div>
+                        </div>
+                      </div>                                          
                     </div>        
                   </div>
                 </article>
@@ -282,23 +297,26 @@
                   
                     <article class="media">
                       <div class="media-left">
-                        <figure class="image is-64x64">
-                          <img
-                            src="https://bulma.io/images/placeholders/128x128.png"
-                            alt="Image"
-                          />
-                        </figure>
                       </div>
                       <div class="media-content">
                         <div class="content">
-                          <p>
-                            <strong>John Smith</strong> <small>@johnsmith</small>
-                            <small>31m</small>
-                            <br />
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Aenean efficitur sit amet massa fringilla egestas. Nullam
-                            condimentum luctus turpis.
-                          </p>
+                          <h2 class="title is-2">News Surf</h2>
+                  <p class="subtitle">Top news in popular catagories</p>
+                  <input class="input newsOptions" type="text" placeholder="Text input" style="width:8%">
+                  </div>
+                  
+                  <button type="button" class="newsSelectBtn button is-primary" >Surf!</button>
+                  <br />
+                  <div class="newsContainer"><!--Container for all things News! -->
+
+                <img src="https://keaganscastle.com/img/placeholders/news.png"
+                    width="480"
+                    height=""
+                  >
+                  <br>
+                  <button type="button" class="saveArticle button is-primary">Save for Later</button>
+                    <button type="button" class="deleteNewsBtn button is-primary">Delete Saved Articles</button>
+                    <div class="savedArticlesDiv"></div>
                         </div>
                         <nav class="level is-mobile">
                           <div class="level-left">
@@ -323,25 +341,9 @@
                     </article>
             <!--Top News Section-->
                   
-                  <h2 class="title is-2">News Surf</h2>
-                  <p class="subtitle">Top news in popular catagories</p>
-                  <input class="input newsOptions" type="text" placeholder="Text input" style="width:8%">
-                  </div>
                   
-                  <button type="button" class="newsSelectBtn button is-primary" >Surf!</button>
-                  <br />
-                  <div class="newsContainer"><!--Container for all things News! -->
-
-                <img src="https://keaganscastle.com/img/placeholders/news.png"
-                    width="480"
-                    height=""
-                  >
-
                 </div>
-                  <br>
-                <button type="button" class="saveArticle button is-primary">Save for Later</button>
-                  <button type="button" class="deleteNewsBtn button is-primary">Delete Saved Articles</button>
-                  <div class="savedArticlesDiv"></div>
+                  
                
 
                   </div>
@@ -396,8 +398,8 @@
     </div>
 
     
-    <script src = 'assets/script.js'></script> 
-    <script src = 'assets/weather.js'></script> 
+    <script src = './assets/script.js'></script> 
+    <script src = './assets/weather.js'></script> 
     <script src="./ui.js"></script>
 
   </body>
