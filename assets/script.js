@@ -1,3 +1,8 @@
+/* To Do 
+1. Organize 2 JS files and organize code better 
+2. fix local storage problem. 
+*/
+
 //Youtube Section
 
 //youtube assignments
@@ -19,19 +24,34 @@ function displaySavedVideos() {
   if (savedVideoList != null) {
     for (i = 0; i < savedVideoList.length; i++) {
       pTag = $("<p>");
+      pTag.addClass("videoTitles");
+      deleteSingleBtn = $("<button>");
       pTag.text(savedVideoList[i].items[0].snippet.title);
+      pTag.attr("value", savedVideoList[i].items[0].snippet.title);
       pTag.attr("id", savedVideoList[i].items[0].id);
+      //append individual delete button button
+      deleteSingleBtn.attr("type", "button");
+      deleteSingleBtn.addClass("deleteSingleBtn");
+      deleteSingleBtn.attr("value", savedVideoList[i].items[0].snippet.title);
+      deleteSingleBtn.text("Delete");
+      pTag.append(deleteSingleBtn);
       videosDiv.append(pTag);
+
       //creates dynamic onClick that changes video on screen
-      pTag.on("click", function () {
-        videoPlayer.attr(
-          "src",
-          `https://www.youtube.com/embed/${$(this).attr("id")}`
-        );
-      });
     }
   }
 }
+
+$(document).on("click", ".videoTitles", function () {
+  videoPlayer.attr(
+    "src",
+    `https://www.youtube.com/embed/${$(this).attr("id")}`
+  );
+});
+
+$(document).on("click", ".deleteSingleBtn", function () {
+  $(this).parent().remove()
+});
 
 function getVideoData() {
   let category = videoOption.val();
@@ -90,6 +110,7 @@ $(".saveVideo").on("click", function () {
 deleteSaves = $(".deleteSaves");
 deleteSaves.on("click", function () {
   localStorage.removeItem("savedVideoList");
+  
   displaySavedVideos(); //displays saved videos (in this case, deletes them)
 });
 
@@ -100,7 +121,6 @@ newsSelectBtn = $(".newsSelectBtn");
 
 newsSelectBtn.on("click", function () {
   let newsOptions = $(".newsOptions").val();
-  console.log(newsOptions);
 
   $.ajax({
     url:
@@ -138,6 +158,7 @@ function displayCurrentArticles() {
   imageTag = $("<img />");
   descriptionTag = $("<p>");
   sourceTag = $("<a>");
+
   titleTag.text(currentArticle.articles[0].title);
   newsContainer.append(titleTag);
   // appends News Image
