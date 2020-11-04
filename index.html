@@ -6,21 +6,23 @@
     <title>CouchSurf</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
-   
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" 
     />
-    
-    <link rel="shortcut icon" href="/ui-assets/favicon_io(1)/favicon-16x16.png" type="image/xcon">
-    <link rel="stylesheet" href="/ui-assets/favicon_io(1)/style.css">
-    <script src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'> </script>
 
+
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="shortcut icon" href="./ui-assets/favicon_io(1)/favicon-16x16.png" type="image/xcon">
+    <link rel="stylesheet" href="./ui-assets/favicon_io(1)/style.css">
+
+    <script src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'> </script>
   </head>
+
   <body>
     <nav class="navbar has-shadow">
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
           <img
-            src="/ui-assets/CouchSurf(2).png"
+            src="./ui-assets/CouchSurf(2).png"
             style="max-height: 60px;"
             class="py-2 px-2"
           />
@@ -29,21 +31,6 @@
       <div class="navbar-menu" id="nav-links">
         <div class="navbar-end">
           <div class="navbar-item">
-            <div class="dropdown">
-              <div class="dropdown-trigger">
-                <button id="dropdownBtn" class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                  <span>Widgets</span>
-                  <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </button>
-              </div>
-              <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                <div class="dropdown-content">
-                 
-                </div>
-              </div>
-            </div>
           </div>         
           <a href="" class="navbar-item">My Account</a>
           <a href="" class="navbar-item">About Us</a>
@@ -51,27 +38,17 @@
       </div>
     </nav>
 
-
-
-
-
     <div class="container" style="max-width: 100%;">
-      
-
-        <div class="columns">
+          <div class="columns">
           <!-- First Column -->
           <!-- Sidebar -->
-            <div class="column">
+            <div class="column is-2">
               <div class="menu sticky">	
                 <div class="media">
                   <div class="media-content">
                     <p  class="menu-label title is-3 pl-4 mt-3"><b>Widgets</b></p>
-
                   </div>
-                  
-
-                </div>			
-                
+                </div>			               
                 <ul id="menu" class="menu-list">
                   <li><a id="youtubeSurf" class="dropdown-item title is-4">
                     Youtube Surf 
@@ -85,51 +62,9 @@
                   <li><a id="newsSelect" class="dropdown-item title is-4">
                     News
                   </a></li>
-
-
-<!--
-      <div class="modal is-active">
-      <div class="modal-background"></div>
-      <div class="modal-card">
-        <header class="modal-card-head">
-          <p class="modal-card-title">Modal title</p>
-          <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-           Content ... 
-        </section>
-        <footer class="modal-card-foot">
-          <button class="button is-success">Save changes</button>
-          <button class="button">Cancel</button>
-        </footer>
-      </div>
-    </div>
--->
-
-
-
-
-
-        <div class="columns is-2">
-          <!-- First Column -->
-          <!-- Sidebar -->
-            <div class="column">
-              <div class="menu sticky">				
-                <p  class="menu-label"><b>Quick Links</b></p>
-                <ul id="menu" class="menu-list">
-                  <li><a href="#basic">Basic SEO Checklist</a></li>
-                  <li><a href="#keyword">Keyword Research Checklist</a></li>
-                  <li><a href="#onpage">On-Page SEO Checklist</a></li>
-                  <li><a href="#content">Content Checklist</a></li>
-                  <li><a href="#technical">Technical SEO Checklist</a></li>
-                  <li><a href="#link">Link Building Checklist</a></li>
-
                 </ul>
               </div>
-
             </div>
-
-
 
             <!-- Second Column-->
             <div class="column ">
@@ -148,6 +83,7 @@
                             </div>                            
                           </div>
                         </nav>
+
                         <p class="subtitle">Top videos in popular catagories</p>
                         <div class="select">
                           <select class="test videoOptions">
@@ -161,7 +97,9 @@
                           </select>
                           <br />
                         </div>
+
                         <button type="button" class="videoSelectBtn button is-primary">Surf!</button>
+
                         <br />
                         <iframe
                           id="videoPlayer"
@@ -172,10 +110,12 @@
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowfullscreen
                         ></iframe>
+
                         <br>
                           <button type="button" class="saveVideo button is-primary">Save for Later</button>
                           <button type="button" class="deleteSaves button is-primary">Delete Saved Videos</button>
                           <div class="savedVideos"></div>
+
                     </div>              
                   </div>
                 </article>
@@ -242,19 +182,7 @@
                           </div>
                         </div>
                       </div> 
-                      <div class="level">
-                        <div class="level-left">
-                          <div class="level-item">                                                    
-                            <p class="is-size-4 media-left">ReWire</p>
-                          </div>
-                        </div>
-                        <div class="level-right">
-                          <div class="level-item">
-                            <a href="/assets/Games/ReWire.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
-                          </div>
-                        </div>
-                      </div>
-                      
+
                     </div>        
                   </div>
                 </article>
@@ -262,43 +190,76 @@
             </div>
           
       <!--Second Column-->
-            <div class="column">
-              <!--First Box-->
-              <div class="card">
-                <div class="card-content">
-                  <p class="title">
-                    “There are two hard things in computer science: cache
-                    invalidation, naming things, and off-by-one errors.”
-                  </p>
-                  <p class="subtitle">Jeff Atwood</p>
+          
+
+          <!--Third Column-->
+          <div class="column">
+
+              <!-- Weather box -->
+             <div class = "box">
+                <nav class="navbar">
+                  <div class="navbar-start">
+                    <h2 class="navbar-item title is-2">Weather</h2>
+                  </div>
+                  <div class="navbar-end">
+                    <div class="navbar-item">
+                      <button class="button is-small is-white ">Close</button>
+                    </div>                            
+                  </div>
+                </nav>
+ 
+                <div class = "columns is-2">            
+                  <div class = "column">                  
+                    <h5 id="currentCity"></h5>
+                    <h4 id="weatherDate"></h4>
+                  </div>
+                  <div class = "column" id = "currentConditions">                    
+                  </div>
+                </div>              
+
+                <div class = "columns is-2">
+            
+                  <div class = "column">
+                  
+                    <h5 id="currentCity"></h5>
+                    <h4 id="weatherDate"></h4>
+
+                  </div>
+                  <div class = "column" id = "currentConditions">
+                    
+                  </div>
                 </div>
-                <footer class="card-footer">
-                  <p class="card-footer-item">
-                    <span>
-                      View on
-                      <a
-                        href="https://twitter.com/codinghorror/status/506010907021828096"
-                        >Twitter</a
-                      >
-                    </span>
-                  </p>
-                  <p class="card-footer-item">
-                    <span> Share on <a href="#">Facebook</a> </span>
-                  </p>
-                </footer>
+               
+
+                <div class = "columns is-5" id="forecast">
+                  
+          
+                </div>
               </div>
             </div>
           <!--Third Column-->
             <div class="column">
               <!--Second Box-->
 
-                  
-                
+
             <!--Top News Section-->
             <div class="box">
                   <h2 class="title is-2">News Surf</h2>
                   <p class="subtitle">Top news in popular catagories</p>
                   <input class="input newsOptions" type="text" placeholder="Text input" >
+                  </div>
+              
+
+                <div class="box">
+                  
+                    <article class="media">
+                      <div class="media-left">
+                      </div>
+                      <div class="media-content">
+                        <div class="content">
+                          <h2 class="title is-2">News Surf</h2>
+                  <p class="subtitle">Top news in popular catagories</p>
+                  <input class="input newsOptions" type="text" placeholder="Text input">
                   </div>
                   
                   <button type="button" class="newsSelectBtn button is-primary" >Surf!</button>
@@ -309,7 +270,35 @@
                     width="480"
                     height=""
                   >
-
+                  <br>
+                  <button type="button" class="saveArticle button is-primary">Save for Later</button>
+                    <button type="button" class="deleteNewsBtn button is-primary">Delete Saved Articles</button>
+                    <div class="savedArticlesDiv"></div>
+                        </div>
+                        <nav class="level is-mobile">
+                          <div class="level-left">
+                            <a class="level-item" aria-label="reply">
+                              <span class="icon is-small">
+                                <i class="fas fa-reply" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                            <a class="level-item" aria-label="retweet">
+                              <span class="icon is-small">
+                                <i class="fas fa-retweet" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                            <a class="level-item" aria-label="like">
+                              <span class="icon is-small">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                          </div>
+                        </nav>
+                      </div>
+                    </article>
+            
+                  
+                  
                 </div>
                   <br>
                 <button type="button" class="saveArticle button is-primary">Save for Later</button>
@@ -364,13 +353,16 @@
                     </article>
                   </div>
                 </div>
-              </div>  
+             </div>
             </div>
           </div>
+        </div>
     </div>
 
     <script src = './assets/youtubeJs/youtube.js'></script> 
     <script src = './assets/newsJs/news.js'></script> 
+    <script src = './assets/weather.js'></script> 
     <script src="./ui.js"></script>
+
   </body>
   </html>
