@@ -100,7 +100,9 @@ newsSelectBtn = $(".newsSelectBtn");
 
 newsSelectBtn.on("click", function () {
   let newsOptions = $(".newsOptions").val();
-  console.log(newsOptions);
+
+
+  
 
   $.ajax({
     url:
