@@ -9,13 +9,10 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
    
     />
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="shortcut icon" href="/ui-assets/favicon_io(1)/favicon-16x16.png" type="image/xcon">
     <link rel="stylesheet" href="/ui-assets/favicon_io(1)/style.css">
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'> </script>
-
-
-
 
   </head>
   <body>
@@ -43,18 +40,7 @@
               </div>
               <div class="dropdown-menu" id="dropdown-menu" role="menu">
                 <div class="dropdown-content">
-                  <a id="youtubeSurf" class="dropdown-item is-">
-                    Youtube Surf 
-                  </a>
-                  <a id="gameSelect" class="dropdown-item">
-                    Games 
-                  </a>
-                  <a id="weatherSelect" class="dropdown-item">
-                    Weather 
-                  </a>
-                  <a id="newsSelect" class="dropdown-item">
-                    News
-                  </a>
+                 
                 </div>
               </div>
             </div>
@@ -67,7 +53,40 @@
 
 
 
-=======
+
+
+    <div class="container" style="max-width: 100%;">
+      
+
+        <div class="columns">
+          <!-- First Column -->
+          <!-- Sidebar -->
+            <div class="column">
+              <div class="menu sticky">	
+                <div class="media">
+                  <div class="media-content">
+                    <p  class="menu-label title is-3 pl-4 mt-3"><b>Widgets</b></p>
+
+                  </div>
+                  
+
+                </div>			
+                
+                <ul id="menu" class="menu-list">
+                  <li><a id="youtubeSurf" class="dropdown-item title is-4">
+                    Youtube Surf 
+                  </a></li>
+                  <li><a id="gameSelect" class="dropdown-item title is-4">
+                    Games 
+                  </a></li>
+                  <li><a id="weatherSelect" class="dropdown-item title is-4">
+                    Weather 
+                  </a></li>
+                  <li><a id="newsSelect" class="dropdown-item title is-4">
+                    News
+                  </a></li>
+
+
 <!--
       <div class="modal is-active">
       <div class="modal-background"></div>
@@ -89,11 +108,29 @@
 
 
 
-    <div class="container">
 
-        <div class="columns is-3">
-          
-            
+
+        <div class="columns is-2">
+          <!-- First Column -->
+          <!-- Sidebar -->
+            <div class="column">
+              <div class="menu sticky">				
+                <p  class="menu-label"><b>Quick Links</b></p>
+                <ul id="menu" class="menu-list">
+                  <li><a href="#basic">Basic SEO Checklist</a></li>
+                  <li><a href="#keyword">Keyword Research Checklist</a></li>
+                  <li><a href="#onpage">On-Page SEO Checklist</a></li>
+                  <li><a href="#content">Content Checklist</a></li>
+                  <li><a href="#technical">Technical SEO Checklist</a></li>
+                  <li><a href="#link">Link Building Checklist</a></li>
+
+                </ul>
+              </div>
+
+            </div>
+
+
+
             <!-- Second Column-->
             <div class="column ">
               <!-- 1st Box -->
@@ -124,7 +161,7 @@
                           </select>
                           <br />
                         </div>
-                        <button type="button" class="signInBtn button is-primary">Go!</button>
+                        <button type="button" class="videoSelectBtn button is-primary">Surf!</button>
                         <br />
                         <iframe
                           id="videoPlayer"
@@ -135,6 +172,10 @@
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowfullscreen
                         ></iframe>
+                        <br>
+                          <button type="button" class="saveVideo button is-primary">Save for Later</button>
+                          <button type="button" class="deleteSaves button is-primary">Delete Saved Videos</button>
+                          <div class="savedVideos"></div>
                     </div>              
                   </div>
                 </article>
@@ -156,29 +197,24 @@
                       <div class="level">
                         <div class="level-left">
                           <div class="level-item">                                                    
-                            <p class="is-size-4 media-left">CouchSurf: COVID </p>
+                            <p class="is-size-4 media-left">CouchSurf: Attack of COVID </p>
                           </div>
                         </div>
                         <div class="level-right">
                           <div class="level-item">
-                            <img src="./assets/images/Couch Covid Blasters.gif" alt="" style='height: 8em; width: 15em;'>
-                            <a href="./assets/Games/couchSurfer/index.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                            <a href="/assets/Games/couchSurfer/index.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
                           </div>
                         </div>
                       </div>
                       <div class="level">
                         <div class="level-left">
                           <div class="level-item">                                                    
-                            <p class="is-size-4 media-left">Everyone's Sky</p>
-                            
+                            <p class="is-size-4 media-left">EveryoneSky</p>
                           </div>
-                          
                         </div>
-                        
                         <div class="level-right">
                           <div class="level-item">
-                            <img src="./assets/images/Everyone's Sky.gif" alt="" style='height: 8em; width: 15em;'>
-                            <a href="./assets/Games/EveryoneSky.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                            <a href="/assets/Games/EveryoneSky.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
                           </div>
                         </div>
                       </div> 
@@ -190,8 +226,7 @@
                         </div>
                         <div class="level-right">
                           <div class="level-item">
-                            <img src="./assets/images/Ninja vs EVILCORP.gif" alt="" style='height: 8em; width: 15em;'>
-                            <a href="./assets/Games/NinjavsEvil.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                            <a href="/assets/Games/NinjavsEvil.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
                           </div>
                         </div>
                       </div>  
@@ -200,12 +235,22 @@
                           <div class="level-item">                                                    
                             <p class="is-size-4 media-left">ReWire</p>
                           </div>
-                          
                         </div>
                         <div class="level-right">
                           <div class="level-item">
-                            <img src="./assets/images/Re-Wire.gif" alt="" style='height: 8em; width: 15em;'>
-                            <a href="./assets/Games/ReWire.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                            <a href="/assets/Games/ReWire.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
+                          </div>
+                        </div>
+                      </div> 
+                      <div class="level">
+                        <div class="level-left">
+                          <div class="level-item">                                                    
+                            <p class="is-size-4 media-left">ReWire</p>
+                          </div>
+                        </div>
+                        <div class="level-right">
+                          <div class="level-item">
+                            <a href="/assets/Games/ReWire.html" target="_blank" rel="noreferrer noopener"><button class="button media-right">Play</button></a>
                           </div>
                         </div>
                       </div> 
@@ -259,11 +304,12 @@
             <div class="column">
               <!--Second Box-->
                 <div class="box">
+                  
                     <article class="media">
                       <div class="media-left">
                         <figure class="image is-64x64">
                           <img
-                            src="./assets/images/Re-Wire.gif"
+                            src="https://bulma.io/images/placeholders/128x128.png"
                             alt="Image"
                           />
                         </figure>
@@ -271,7 +317,7 @@
                       <div class="media-content">
                         <div class="content">
                           <p>
-                            <strong>John Smith</strong> <small>@John Smith</small>
+                            <strong>John Smith</strong> <small>@johnsmith</small>
                             <small>31m</small>
                             <br />
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -300,6 +346,29 @@
                         </nav>
                       </div>
                     </article>
+            <!--Top News Section-->
+                  
+                  <h2 class="title is-2">News Surf</h2>
+                  <p class="subtitle">Top news in popular catagories</p>
+                  <input class="input newsOptions" type="text" placeholder="Text input" style="width:8%">
+                  </div>
+                  
+                  <button type="button" class="newsSelectBtn button is-primary" >Surf!</button>
+                  <br />
+                  <div class="newsContainer"><!--Container for all things News! -->
+
+                <img src="https://keaganscastle.com/img/placeholders/news.png"
+                    width="480"
+                    height=""
+                  >
+
+                </div>
+                  <br>
+                <button type="button" class="saveArticle button is-primary">Save for Later</button>
+                  <button type="button" class="deleteNewsBtn button is-primary">Delete Saved Articles</button>
+                  <div class="savedArticlesDiv"></div>
+               
+
                   </div>
                 <!--Second Box-->
                   <div class="box">
@@ -350,6 +419,8 @@
             </div>
           </div>
     </div>
+
+    
     <script src = 'assets/script.js'></script> 
     <script src="./ui.js"></script>
   </body>

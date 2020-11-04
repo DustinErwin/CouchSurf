@@ -1,3 +1,4 @@
+
 .social{
     display: inline-block;
     width: 45px;
@@ -5,4 +6,9 @@
     text-indent: -999999px;
     margin-right: 10px;
     border-radius: 3px;
+
+.sticky {
+    position: sticky;
+    top: 30px;
+
 }
