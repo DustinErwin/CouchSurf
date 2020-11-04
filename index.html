@@ -6,21 +6,23 @@
     <title>CouchSurf</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
-   
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" 
     />
-    
-    <link rel="shortcut icon" href="/ui-assets/favicon_io(1)/favicon-16x16.png" type="image/xcon">
-    <link rel="stylesheet" href="/ui-assets/favicon_io(1)/style.css">
-    <script src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'> </script>
 
+
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="shortcut icon" href="./ui-assets/favicon_io(1)/favicon-16x16.png" type="image/xcon">
+    <link rel="stylesheet" href="./ui-assets/favicon_io(1)/style.css">
+
+    <script src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'> </script>
   </head>
+
   <body>
     <nav class="navbar has-shadow">
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
           <img
-            src="/ui-assets/CouchSurf(2).png"
+            src="./ui-assets/CouchSurf(2).png"
             style="max-height: 60px;"
             class="py-2 px-2"
           />
@@ -39,8 +41,7 @@
                 </button>
               </div>
               <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                <div class="dropdown-content">
-                 
+                <div class="dropdown-content">                 
                 </div>
               </div>
             </div>
@@ -51,14 +52,8 @@
       </div>
     </nav>
 
-
-
-
-
     <div class="container" style="max-width: 100%;">
-      
-
-        <div class="columns">
+          <div class="columns">
           <!-- First Column -->
           <!-- Sidebar -->
             <div class="column">
@@ -81,6 +76,9 @@
                   <li><a id="newsSelect" class="dropdown-item title is-4">
                     News
                   </a></li>
+                </ul>
+              </div>
+            </div>
 
             <!-- Second Column-->
             <div class="column ">
@@ -99,6 +97,7 @@
                             </div>                            
                           </div>
                         </nav>
+
                         <p class="subtitle">Top videos in popular catagories</p>
                         <div class="select">
                           <select class="test videoOptions">
@@ -112,7 +111,11 @@
                           </select>
                           <br />
                         </div>
+
+                        <button type="button" class="signInBtn button is-primary" id="gobutton">Go!</button>
+
                         <button type="button" class="videoSelectBtn button is-primary">Surf!</button>
+
                         <br />
                         <iframe
                           id="videoPlayer"
@@ -123,10 +126,12 @@
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowfullscreen
                         ></iframe>
+
                         <br>
                           <button type="button" class="saveVideo button is-primary">Save for Later</button>
                           <button type="button" class="deleteSaves button is-primary">Delete Saved Videos</button>
                           <div class="savedVideos"></div>
+
                     </div>              
                   </div>
                 </article>
@@ -193,6 +198,7 @@
                           </div>
                         </div>
                       </div> 
+
                     </div>        
                   </div>
                 </article>
@@ -226,30 +232,67 @@
                 </footer>
               </div>
             </div>
+
+          <!--Third Column-->
+            <div class="column">
+
+              <!-- Weather box -->
+
+
+             <div class = "box">
+                <nav class="navbar">
+                  <div class="navbar-start">
+                    <h2 class="navbar-item title is-2">Weather</h2>
+                  </div>
+                  <div class="navbar-end">
+                    <div class="navbar-item">
+                      <button class="button is-small is-white ">Close</button>
+                    </div>                            
+                  </div>
+                </nav>
+                <div class = "columns is-2">
+            
+                  <div class = "column">
+                  
+                    <h5 id="currentCity"></h5>
+                    <h4 id="weatherDate"></h4>
+
+                  </div>
+                  <div class = "column" id = "currentConditions">
+                    
+                  </div>
+                </div>
+               
+                <div class = "columns is-5" id="forecast">
+                  
           <!--Third Column-->
             <div class="column">
               <!--Second Box-->
+
                 <div class="box">
                   
                     <article class="media">
                       <div class="media-left">
-                        <figure class="image is-64x64">
-                          <img
-                            src="https://bulma.io/images/placeholders/128x128.png"
-                            alt="Image"
-                          />
-                        </figure>
                       </div>
                       <div class="media-content">
                         <div class="content">
-                          <p>
-                            <strong>John Smith</strong> <small>@johnsmith</small>
-                            <small>31m</small>
-                            <br />
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Aenean efficitur sit amet massa fringilla egestas. Nullam
-                            condimentum luctus turpis.
-                          </p>
+                          <h2 class="title is-2">News Surf</h2>
+                  <p class="subtitle">Top news in popular catagories</p>
+                  <input class="input newsOptions" type="text" placeholder="Text input" style="width:8%">
+                  </div>
+                  
+                  <button type="button" class="newsSelectBtn button is-primary" >Surf!</button>
+                  <br />
+                  <div class="newsContainer"><!--Container for all things News! -->
+
+                <img src="https://keaganscastle.com/img/placeholders/news.png"
+                    width="480"
+                    height=""
+                  >
+                  <br>
+                  <button type="button" class="saveArticle button is-primary">Save for Later</button>
+                    <button type="button" class="deleteNewsBtn button is-primary">Delete Saved Articles</button>
+                    <div class="savedArticlesDiv"></div>
                         </div>
                         <nav class="level is-mobile">
                           <div class="level-left">
@@ -274,25 +317,9 @@
                     </article>
             <!--Top News Section-->
                   
-                  <h2 class="title is-2">News Surf</h2>
-                  <p class="subtitle">Top news in popular catagories</p>
-                  <input class="input newsOptions" type="text" placeholder="Text input" style="width:8%">
-                  </div>
                   
-                  <button type="button" class="newsSelectBtn button is-primary" >Surf!</button>
-                  <br />
-                  <div class="newsContainer"><!--Container for all things News! -->
-
-                <img src="https://keaganscastle.com/img/placeholders/news.png"
-                    width="480"
-                    height=""
-                  >
-
                 </div>
-                  <br>
-                <button type="button" class="saveArticle button is-primary">Save for Later</button>
-                  <button type="button" class="deleteNewsBtn button is-primary">Delete Saved Articles</button>
-                  <div class="savedArticlesDiv"></div>
+                  
                
 
                   </div>
@@ -341,13 +368,15 @@
                     </article>
                   </div>
                 </div>
-          
+             </div>
             </div>
           </div>
     </div>
 
     
-    <script src = 'assets/script.js'></script> 
+    <script src = './assets/script.js'></script> 
+    <script src = './assets/weather.js'></script> 
     <script src="./ui.js"></script>
+
   </body>
   </html>
