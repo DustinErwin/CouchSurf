@@ -1,14 +1,12 @@
-.social {
-  display: inline-block;
-  width: 45px;
-  height: 22px;
-  text-indent: -999999px;
-  margin-right: 10px;
-  border-radius: 3px;
-}
 .sticky {
   position: sticky;
   top: 30px;
+}
+#gameBtn {
+  width: 200px;
+}
+#gameBtn:hover {
+  background-image: url("./images/Play.png");
 }
 
 /*
@@ -34,11 +32,11 @@
 }
 */
 
-.couchSurf-btn{
+.couchSurf-btn {
   background-color: #38b6ff;
   color: white;
 }
 
-.couchSurf-font{
+.couchSurf-font {
   color: #38b6ff;
 }
