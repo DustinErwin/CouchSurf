@@ -7,6 +7,8 @@ $(document).ready(function(){
  var gameWidget = $("#gameWidget")
  var weatherSelect = $("#weatherSelect")
  var weatherWidget = $("#weatherWidget")
+ var newsSelect = $("#newsSelect")
+ var newsWidget =$("#newsWidget")
 
 
 dropdownBtn.on("click", function (){
@@ -29,6 +31,10 @@ weatherSelect.on("click", function(){
   weatherSelect.toggleClass("has-text-grey")
 })
 
+newsSelect.on("click", function(){
+  newsWidget.toggleClass("is-hidden")
+  newsSelect.toggleClass("has-text-grey")
+})
 
 
 
