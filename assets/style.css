@@ -11,11 +11,12 @@
   top: 30px;
 }
 
+/*
 .ytcontainer{
   position:;
   width: 100%;
   overflow: hidden;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  padding-top: 56.25%; /* 16:9 Aspect Ratio 
 
 }
 
@@ -31,6 +32,7 @@
   border: none;
 
 }
+*/
 
 .couchSurf-btn{
   background-color: #38b6ff;
