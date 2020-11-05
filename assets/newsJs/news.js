@@ -9,7 +9,6 @@ function displaySavedArticles() {
   savedArticlesDiv = $(".savedArticlesDiv");
   savedArticlesDiv.empty();
   savedArticleList = JSON.parse(localStorage.getItem("savedArticleList"));
-  console.log("savedArticleList", savedArticleList);
   if (savedArticleList != null) {
     for (i = 0; i < savedArticleList.length; i++) {
       //creates delete button
