@@ -5,7 +5,10 @@ $(document).ready(function(){
  var ytWidget = $("#youtubeWidget");
  var gameSelect = $('#gameSelect');
  var gameWidget = $("#gameWidget")
-
+ var weatherSelect = $("#weatherSelect")
+ var weatherWidget = $("#weatherWidget")
+ var newsSelect = $("#newsSelect")
+ var newsWidget =$("#newsWidget")
 
 
 dropdownBtn.on("click", function (){
@@ -23,6 +26,15 @@ gameSelect.on("click", function(){
   gameSelect.toggleClass("has-text-grey")
 })
 
+weatherSelect.on("click", function(){
+  weatherWidget.toggleClass("is-hidden")
+  weatherSelect.toggleClass("has-text-grey")
+})
+
+newsSelect.on("click", function(){
+  newsWidget.toggleClass("is-hidden")
+  newsSelect.toggleClass("has-text-grey")
+})
 
 
 
