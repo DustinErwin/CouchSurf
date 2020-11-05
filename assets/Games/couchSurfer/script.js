@@ -1,4 +1,6 @@
 let rst = document.querySelector("#resetBtn");
+let start = document.querySelector(".start");
+let controls = document.querySelector(".controls");
 let times = 0;
 let laserSound;
 let killSound;
@@ -10,6 +12,8 @@ document.addEventListener("keyup", (event) => {
   if (event.keyCode !== 13 || times === 1) {
     return;
   }
+  start.setAttribute("class", "hidden");
+  controls.setAttribute("class", "hidden");
   music = new Audio("./sounds/gameMusic.mp3");
   music.play();
   music.volume = 0.1;
@@ -105,25 +109,36 @@ document.addEventListener("keyup", (event) => {
     }
 
     if (squares[currentCouchIndex].classList.contains("covid", "couch")) {
-      resultDisplay.textContent = "Game Over";
+      start.textContent = "Game Over";
+      start.setAttribute("class", "start");
       squares[currentCouchIndex].classList.add("boom");
       clearInterval(covidId);
     }
 
     for (let i = 0; i <= covids.length - 1; i++) {
       if (covids[i] > squares.length - (width - 1)) {
-        resultDisplay.textContent = "Game Over";
+        start.textContent = "Game Over";
+        start.setAttribute("class", "start");
         clearInterval(covidId);
       }
     }
 
     //Endgame results
     if (covidsTakenDown.length === covids.length) {
-      resultDisplay.textContent = "You Win";
+      start.textContent = "You Win";
+      start.setAttribute("class", "start");
       clearInterval(covidId);
     }
+    incDiff();
   }
-  covidId = setInterval(moveCovids, 500);
+
+  //Increases speed of covids as they are destroyed
+  incDiff();
+  function incDiff() {
+    clearInterval(covidId);
+    let intTime = 500 - result * 15;
+    covidId = setInterval(moveCovids, intTime);
+  }
 
   //Shoots projectile
   function shoot(e) {
@@ -140,6 +155,7 @@ document.addEventListener("keyup", (event) => {
         squares[currentLaserIndex].classList.remove("covid");
         killSound = new Audio("sounds/killSound.wav");
         killSound.play();
+        killSound.volume = 0.4;
         squares[currentLaserIndex].classList.add("boom");
 
         setTimeout(
@@ -169,6 +185,7 @@ document.addEventListener("keyup", (event) => {
 
         laserSound = new Audio("sounds/laserSound.mp3");
         laserSound.play();
+        laserSound.volume = 0.7;
         break;
     }
   }
