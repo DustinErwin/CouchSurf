@@ -40,3 +40,14 @@
 .couchSurf-font {
   color: #38b6ff;
 }
+/* for Js dynamically created buttons since they don't interact with Bulma*/
+.individual-delete-button {
+  border-radius: 5px;
+  border: 0;
+  font-size: 0.9em;
+  margin-left: 1em;
+}
+
+.hidden {
+  display: none;
+}
