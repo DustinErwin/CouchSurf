@@ -49,3 +49,7 @@
   font-size: 0.9em;
   margin-left: 1em;
 }
+
+.hidden {
+  display: none;
+}

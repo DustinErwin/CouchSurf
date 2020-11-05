@@ -1,8 +1,3 @@
-/* To Do 
-1. Organize 2 JS files and organize code better 
-2. fix local storage problem. 
-*/
-
 //Youtube Section
 
 //youtube assignments
@@ -13,7 +8,7 @@ let videoSelectBtn = $(".videoSelectBtn");
 let testVideoLink = "https://www.youtube.com/embed/4H2lnt3QkyA";
 let videoPlayer = $("#videoPlayer");
 
-//displays current videos and articles saved in local storage
+//displays current videos saved in local storage
 displaySavedVideos();
 
 function displaySavedVideos() {
@@ -24,9 +19,20 @@ function displaySavedVideos() {
     for (i = 0; i < savedVideoList.length; i++) {
       pTag = $("<p>");
       pTag.addClass("videoTitles");
-      //creates single Delete button 
-      deleteSingleBtn = $("<button>").attr({type: 'button', class: 'couchSurf-btn deleteSingleBtn individual-delete-button', value: 'savedVideoList[i].items[0].snippet.title',}).text('Delete');
-      pTag.attr({value: 'savedVideoList[i].items[0].snippet.title', id:'savedVideoList[i].items[0].id' }).text(savedVideoList[i].items[0].snippet.title);
+      //creates single Delete button
+      deleteSingleBtn = $("<button>")
+        .attr({
+          type: "button",
+          class: "couchSurf-btn deleteSingleBtn individual-delete-button",
+          value: "savedVideoList[i].items[0].snippet.title",
+        })
+        .text("Delete");
+      pTag
+        .attr({
+          value: "savedVideoList[i].items[0].snippet.title",
+          id: "savedVideoList[i].items[0].id",
+        })
+        .text(savedVideoList[i].items[0].snippet.title);
       //append individual delete button button
       pTag.append(deleteSingleBtn);
       videosDiv.append(pTag);
@@ -34,7 +40,7 @@ function displaySavedVideos() {
   }
 }
 
-    //creates dynamic onClick that changes video on screen
+//creates dynamic onClick that changes video on screen
 $(document).on("click", ".videoTitles", function () {
   videoPlayer.attr(
     "src",
@@ -46,21 +52,25 @@ $(document).on("click", ".deleteSingleBtn", function () {
   //pull saved video list and set equal to variable
   savedVideoList = JSON.parse(localStorage.getItem("savedVideoList"));
   //for each item, check if $this id === saved video list name
-  for(i=0;i<savedVideoList.length;i++){
-     //if true, remove that index from the list 
-    if (savedVideoList[i].items[0].snippet.title === deleteSingleBtn.attr('value')){
-      savedVideoList.splice([i],1)
-      //then set that new list back to local storage 
-      localStorage.setItem('savedVideoList',JSON.stringify(savedVideoList))
-  }}
- 
-  //set the new list back in storage 
-  //remove the pTag on screen containing deleted information 
+  for (i = 0; i < savedVideoList.length; i++) {
+    //if true, remove that index from the list
+    if (
+      savedVideoList[i].items[0].snippet.title === deleteSingleBtn.attr("value")
+    ) {
+      savedVideoList.splice([i], 1);
+      //then set that new list back to local storage
+      localStorage.setItem("savedVideoList", JSON.stringify(savedVideoList));
+    }
+  }
+
+  //set the new list back in storage
+  //remove the pTag on screen containing deleted information
   $(this).parent().remove();
 });
 
 function getVideoData() {
   let category = videoOption.val();
+
   $.ajax({
     type: "GET",
     url: "https://www.googleapis.com/youtube/v3/videos?",
