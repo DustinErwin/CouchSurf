@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <nav class="navbar has-shadow">
+    <nav class="navbar has-shadow mb-5">
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
           <img
@@ -29,18 +29,23 @@
         </a>
       </div>
       <div class="navbar-menu" id="nav-links">
-        <div class="navbar-end">
-          <div class="navbar-item">
-          </div>         
-          <a href="" class="navbar-item">My Account</a>
-          <a href="" class="navbar-item">About Us</a>
+        <div class="navbar-end mr-3"> 
+          <div class="buttons">
+            <button class="button couchSurf-btn">
+              Sign up
+            </button>
+            <button class="button is-light">
+              Log in
+            </button>
+          </div>
+          
         </div>
       </div>
     </nav>
 
     <div class="container" style="max-width: 100%;">
           <div class="columns">
-          <!-- First Column -->
+          <!-- First Column  -->
           <!-- Sidebar -->
             <div class="column is-2">
               <div class="menu sticky">	
@@ -49,19 +54,21 @@
                     <p  class="menu-label title is-3 pl-4 mt-3"><b>Widgets</b></p>
                   </div>
                 </div>			               
-                <ul id="menu" class="menu-list">
-                  <li><a id="youtubeSurf" class="dropdown-item title is-4">
-                    Youtube Surf 
-                  </a></li>
-                  <li><a id="gameSelect" class="dropdown-item title is-4">
-                    Games 
-                  </a></li>
-                  <li><a id="weatherSelect" class="dropdown-item title is-4">
-                    Weather 
-                  </a></li>
-                  <li><a id="newsSelect" class="dropdown-item title is-4">
+                <ul id="menu" class="menu-list couchSurf-font">
+                  <li><a id="newsSelect" class="dropdown-item title is-4"><img src="https://img.icons8.com/office/16/000000/retro-tv.png"/>
                     News
                   </a></li>
+                  <li><a id="weatherSelect" class="dropdown-item title is-4"><img src="https://img.icons8.com/office/16/000000/sun.png"/>
+                    Weather 
+                  </a></li>
+                  <li><a id="youtubeSurf" class="dropdown-item title is-4" ><img src="https://img.icons8.com/office/16/000000/start.png"/>
+                    Youtube Surf 
+                  </a></li>
+                  <li><a id="gameSelect" class="dropdown-item title is-4"><img src="https://img.icons8.com/office/16/000000/controller.png"/>
+                    Games 
+                  </a></li>
+                 
+                  
                 </ul>
               </div>
             </div>
@@ -75,7 +82,7 @@
                     <div class="content">
                         <nav class="navbar">
                           <div class="navbar-start">
-                            <h2 class="navbar-item title is-2">Youtube Surf</h2>
+                            <h2 class="navbar-item title is-2" >Youtube Surf</h2>
                           </div>
                           <div class="navbar-end">
                             <div class="navbar-item">
@@ -98,22 +105,23 @@
                           <br />
                         </div>
 
-                        <button type="button" class="videoSelectBtn button is-primary">Surf!</button>
+                        <button type="button" class="mb-4 videoSelectBtn button couchSurf-btn">Surf!</button>
 
-                        <br />
-                        <iframe
-                          id="videoPlayer"
-                          width="560"
-                          height="315"
+                     
+                        <div class="image is-16by9">
+                          <iframe class="has-ratio"
+                          id="videoPlayer"                        
                           src="https://gettravel.com/wp-content/uploads/2018/04/Video-Placeholder.jpg"
                           frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowfullscreen
                         ></iframe>
 
+
+                        </div>
+               
                         <br>
-                          <button type="button" class="saveVideo button is-primary">Save for Later</button>
-                          <button type="button" class="deleteSaves button is-primary">Delete Saved Videos</button>
+                          <button type="button" class="saveVideo button couchSurf-btn">Save for Later</button>
+                          <button type="button" class="deleteSaves button couchSurf-btn">Delete Saved Videos</button>
                           <div class="savedVideos"></div>
 
                     </div>              
@@ -138,15 +146,15 @@
                         <div class="level-left">
                           <div class="level-item">                                                    
                             <div>
-                              <h1 class='is-size-4'>CouchSurf: Pandemic</h1>
-                              <p class='is-size-6'>by: Dustin Erwin</p>
+                              <h1 class="is-size-4">CouchSurf: Pandemic</h1>
+                              <p class="is-size-6">by: Dustin Erwin</p>
                               <p><strong>Avoid the pandemic by blasting it to bits!</strong></p>
                             </div>
                           </div>
                         </div>
                         <div class="level-right">
                           <div class="level-item">
-                            <a href="./assets/Games/couchSurfer/CovidCouch.html" target="_blank" rel="noreferrer noopener"><img onmouseenter="play(this)" onmouseleave="covid(this)" id='gameBtn' src="./assets/images/Couch Covid Blasters (2).gif" alt=""></a>
+                            <a href="./assets/Games/couchSurfer/CovidCouch.html" target="_blank" rel="noreferrer noopener"><img onmouseenter="play(this)" onmouseleave="covid(this)" id="gameBtn" src="./assets/images/Couch Covid Blasters (2).gif" alt=""></a>
                           </div>
                         </div>
                       </div>
@@ -154,15 +162,15 @@
                         <div class="level-left">
                           <div class="level-item">                                                    
                             <div>
-                              <h1 class='is-size-4'>Everyone's Sky</h1>
-                              <p class='is-size-6'>by: Rémi Vansteelandt</p>
+                              <h1 class="is-size-4">Everyone's Sky</h1>
+                              <p class="is-size-6">by: Rémi Vansteelandt</p>
                               <p><strong>Choose your role and rule the stars!</strong></p>
                             </div>
                           </div>
                         </div>
                         <div class="level-right">
                           <div class="level-item">
-                            <a href="./assets/Games/EveryoneSky.html" target="_blank" rel="noreferrer noopener"><img onmouseenter="play(this)" onmouseleave="sky(this)" id='gameBtn' src="./assets/images/Everyone's Sky.gif" alt=""></a>
+                            <a href="./assets/Games/EveryoneSky.html" target="_blank" rel="noreferrer noopener"><img onmouseenter="play(this)" onmouseleave="sky(this)" id="gameBtn" src="./assets/images//Everyone's Sky.gif" alt=""></a>
                           </div>
                         </div>
                       </div> 
@@ -170,15 +178,15 @@
                         <div class="level-left">
                           <div class="level-item">                                                    
                             <div>
-                              <h1 class='is-size-4'>Ninja vs EVILCORP</h1>
-                              <p class='is-size-6'>by: Rémi Vansteelandt</p>
+                              <h1 class="is-size-4">Ninja vs EVILCORP</h1>
+                              <p class="is-size-6">by: Rémi Vansteelandt</p>
                               <p><strong>Find the EVILCORP files fast!</strong></p>
                             </div>
                           </div>
                         </div>
                         <div class="level-right">
                           <div class="level-item">
-                            <a href="./assets/Games/NinjavsEvil.html" target="_blank" rel="noreferrer noopener"><img onmouseenter="play(this)" onmouseleave="ninja(this)" id='gameBtn' src="./assets/images/Ninja vs EVILCORP.gif" alt=""></a>
+                            <a href="./assets/Games/NinjavsEvil.html" target="_blank" rel="noreferrer noopener"><img onmouseenter="play(this)" onmouseleave="ninja(this)" id="gameBtn" src="./assets/images/Ninja vs EVILCORP.gif" alt=""></a>
                           </div>
                         </div>
                       </div>  
@@ -186,15 +194,15 @@
                         <div class="level-left">
                           <div class="level-item">                                                    
                             <div>
-                              <h1 class='is-size-4'>ReWire</h1>
-                              <p class='is-size-6'>by: Jan Mankopf</p>
+                              <h1 class="is-size-4">ReWire</h1>
+                              <p class="is-size-6">by: Jan Mankopf</p>
                               <p><strong>Reconnect the power any way possible!</strong></p>
                             </div>
                           </div>
                         </div>
                         <div class="level-right">
                           <div class="level-item">
-                            <a href="./assets/Games/ReWire.html" target="_blank" rel="noreferrer noopener"><img onmouseenter="play(this)" onmouseleave="rewire(this)" id='gameBtn' src="./assets/images/Re-Wire.gif" alt=""></a>
+                            <a href="./assets/Games/ReWire.html" target="_blank" rel="noreferrer noopener"><img onmouseenter="play(this)" onmouseleave="rewire(this)" id="gameBtn" src="./assets/images/Re-Wire.gif" alt=""></a>
                           </div>
                         </div>
                       </div> 
@@ -202,18 +210,18 @@
                         <div class="level-left">
                           <div class="level-item">                                                    
                             <div>
-                              <h1 class='is-size-4'>Off the Line</h1>
-                              <p class='is-size-6'>by: Bryan Perfetto</p>
+                              <h1 class="is-size-4">Off the Line</h1>
+                              <p class="is-size-6">by: Bryan Perfetto</p>
                               <p><strong>Test your timing with this twitchy arcade tapper!</strong></p>
                             </div>
                           </div>
                         </div>
                         <div class="level-right">
                           <div class="level-item">
-                            <a href="./assets/Games/offLine.html" target="_blank" rel="noreferrer noopener"><img onmouseenter="play(this)" onmouseleave="offline(this)" id='gameBtn' src="./assets/images/Off The Line.gif" alt=""></a>
+                            <a href="./assets/Games/offLine.html" target="_blank" rel="noreferrer noopener"><img onmouseenter="play(this)" onmouseleave="offline(this)" id="gameBtn" src="./assets/images/Off The Line.gif" alt=""></a>
                           </div>
                         </div>
-                      </div>
+                      </div> 
 
                     </div>        
                   </div>
@@ -221,17 +229,15 @@
               </div>
             </div>
           
-      <!--Second Column-->
-          
 
           <!--Third Column-->
           <div class="column">
 
               <!-- Weather box -->
-             <div class = "box">
+             <div class = "box" id="weatherWidget">
                 <nav class="navbar">
                   <div class="navbar-start">
-                    <h2 class="navbar-item title is-2">Weather</h2>
+                    <h2 class="navbar-item title is-2 ">Weather</h2>
                   </div>
                   <div class="navbar-end">
                     <div class="navbar-item">
@@ -240,7 +246,7 @@
                   </div>
                 </nav>
  
-                <div class = "columns is-2">            
+                <div class = "columns is-2 pl-3">            
                   <div class = "column">                  
                     <h5 id="currentCity"></h5>
                     <h4 id="weatherDate"></h4>
@@ -263,7 +269,7 @@
                 </div>
                
 
-                <div class = "columns is-5" id="forecast">
+                <div class = "columns is-5 pb-5" id="forecast">
                   
           
                 </div>
@@ -275,15 +281,14 @@
 
 
             <!--Top News Section-->
+            <!-- Hidden News Box
             <div class="box">
                   <h2 class="title is-2">News Surf</h2>
                   <p class="subtitle">Top news in popular catagories</p>
                   <input class="input newsOptions" type="text" placeholder="Text input" >
-                  </div>
-              
-
-                <div class="box">
-                  
+            </div>
+            -->
+                <div class="box mr-4" id="newsWidget">                  
                     <article class="media">
                       <div class="media-left">
                       </div>
@@ -292,19 +297,17 @@
                           <h2 class="title is-2">News Surf</h2>
                   <p class="subtitle">Top news in popular catagories</p>
                   <input class="input newsOptions" type="text" placeholder="Text input">
-                  </div>
-                  
-                  <button type="button" class="newsSelectBtn button is-primary" >Surf!</button>
+                  </div>                  
+                  <button type="button" class="newsSelectBtn button couchSurf-btn" >Surf!</button>
                   <br />
                   <div class="newsContainer"><!--Container for all things News! -->
-
                 <img src="https://keaganscastle.com/img/placeholders/news.png"
                     width="300"
                     height=""
                   >
                   <br>
-                  <button type="button" class="saveArticle button is-primary">Save for Later</button>
-                    <button type="button" class="deleteNewsBtn button is-primary">Delete Saved Articles</button>
+                  <button type="button" class="saveArticle button couchSurf-btn">Save for Later</button>
+                    <button type="button" class="deleteNewsBtn button couchSurf-btn">Delete Saved Articles</button>
                     <div class="savedArticlesDiv"></div>
                         </div>
                         <nav class="level is-mobile">
@@ -331,19 +334,23 @@
             
                   
                 </div>
+                <!--Hidden Buttons
                   <br>
                 <button type="button" class="saveArticle button is-primary">Save for Later</button>
                   <button type="button" class="deleteNewsBtn button is-primary">Delete Saved Articles</button>
                   <div class="savedArticlesDiv"></div>
+                
+                
+                -->
+                
                 </div>
 
                 </div> 
 
-                  
-               
-                  
-            
-          
+                <!--Second Box-->
+                </div>
+             </div>
+            </div>
           </div>
         </div>
     </div>
