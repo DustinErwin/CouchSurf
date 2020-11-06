@@ -10,14 +10,13 @@ function getCoordinates() {
         maximumAge: 0 
     }; 
 
-    //console.log ("im inside get coord");
+    
   
     function success(pos) { 
         var crd = pos.coords; 
         var lat = crd.latitude.toString(); 
         var lng = crd.longitude.toString(); 
         coordinates = [lat, lng]; 
-        console.log(`Latitude: ${lat}, Longitude: ${lng}`); 
         getCity(coordinates); 
         return; 
   
@@ -25,7 +24,7 @@ function getCoordinates() {
   
     function error(err) { 
         console.warn(`ERROR(${err.code}): ${err.message}`);
-        // default to portsmouth if location not available;
+        // Default to Portsmouth, NH if location not available;
         coordinates = ["43.0718","-70.7626"];
         city = "Portsmouth";
         $("#currentCity").text(city);
@@ -41,8 +40,7 @@ function getCity(coordinates) {
   var lat = coordinates[0]; 
   var lng = coordinates[1]; 
 
-  //console.log ("inside get city");
-  //console.log ("get city coords: [] " + coordinates[0] + coordinates[1]);
+  
     
   // LocationIQ token 
   xhr.open('GET', "https://us1.locationiq.com/v1/reverse.php?key=pk.ebd508c55452e90db277f28948e222bb&lat=" + lat + "&lon=" + lng + "&format=json", true); 
@@ -55,9 +53,8 @@ function getCity(coordinates) {
     if (xhr.readyState == 4 && xhr.status == 200) { 
       var response = JSON.parse(xhr.responseText); 
       city = response.address.city;
-      console.log(city); 
       $("#currentCity").text(city);
-      console.log ("get city process req coords: [] " + coordinates[0] + coordinates[1]);
+      
                       
     } 
   } 
@@ -66,13 +63,11 @@ function getCity(coordinates) {
      
 getCoordinates(); 
 
-//console.log ("coords: " + coordinates.lat + coordinates.lng);
-//console.log (" after get coords - should have already, before weather api: [] " + coordinates[0] + coordinates[1]);
-//const queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=dover"+ weatherAPIKey;
+
 
 function callWeatherAPI () {
 
-  //console.log (" after get coords - should have already, before weather api: [] " + coordinates[0] + coordinates[1]);
+  /
   const queryUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + coordinates[0] + "&lon=" + coordinates[1]+ weatherAPIKey;
   // Get current city data via API    
 
@@ -82,7 +77,6 @@ function callWeatherAPI () {
   })
   .then(function (response){
 
-    console.log("inside call Weather API");
     displayCurrentWeather(response);
     displayForecast(response);
       
@@ -130,7 +124,7 @@ function displayForecast () {
     $('#forecast').empty();
 
     let results = response.list;
-    //console.log(results);
+    
   
     for (let i = 0; i < results.length; i++) {
 
