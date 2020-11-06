@@ -114,7 +114,6 @@ saveArticleBtn.on("click", function () {
   }
   //if no local storage, currentNewsArticle only adds currentvideo, then sets to local storage
   else {
-    console.log("this works");
     currentNewsArticle = [];
     currentNewsArticle.push(
       JSON.parse(localStorage.getItem("currentNewsArticle"))
