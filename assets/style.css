@@ -4,6 +4,7 @@
 }
 #gameBtn {
   width: 200px;
+  height: 101.25px;
 }
 #gameBtn:hover {
   background-image: url("./images/Play.png");
