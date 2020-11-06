@@ -50,8 +50,10 @@ An app organization platform that allows you to see all your favotire apps on a 
 ## Successes
 
 - Ethan: Was able to successfully implement two apis. Learned how to target items better.
+- Seth: Was able to incorporate the user's current location in order to provide personalized weather conditons.  
 
 ## Challenges
 
 - Ethan: I wish I refactored my code more often as I went. Some issues that should have been simple ended up taking a lot longer to solve
   because my code organization was messy. I'm going to spend more time pseudocoding in the future to keep things cleaner.
+- Seth: The major challenge was figuring out how to retrieve the current location and then using reverse geolocation to convert the coodinates into the name of the town/city. 

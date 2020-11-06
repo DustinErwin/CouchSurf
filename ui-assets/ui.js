@@ -14,7 +14,7 @@ function rewire(a) {
   a.setAttribute("src", "./assets/images/Re-Wire.gif");
 }
 function offline(a) {
-  a.setAttribute("src", "./assets/images/Off The Line.gif");
+  a.setAttribute("src", "./assets/images/offline.gif");
 }
 $(document).ready(function () {
   var dropdown = $(".dropdown");

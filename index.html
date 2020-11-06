@@ -9,7 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" 
     />
 
-    <link rel="stylesheet" href=".uiStyle.css">
+    <link rel="stylesheet" href="./ui-assets/uiStyle.css">
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="shortcut icon" href="./ui-assets/favicon_io(1)/favicon-16x16.png" type="image/xcon">
     <link rel="stylesheet" href="./ui-assets/favicon_io(1)/style.css">
@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <nav class="navbar has-shadow mb-5">
+    <nav class="navbar has-shadow mb-5" id="topNav">
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
           <img
@@ -84,11 +84,6 @@
                           <div class="navbar-start">
                             <h2 class="navbar-item title is-2" >Youtube Surf</h2>
                           </div>
-                          <div class="navbar-end">
-                            <div class="navbar-item">
-                              <button class="button is-small is-white ">Close</button>
-                            </div>                            
-                          </div>
                         </nav>
 
                         <p class="subtitle">Top videos in popular catagories</p>
@@ -143,11 +138,6 @@
                   <div class="navbar-start">
                     <h2 class="navbar-item title is-2 ">Weather</h2>
                   </div>
-                  <div class="navbar-end">
-                    <div class="navbar-item">
-                      <button class="button is-small is-white ">Close</button>
-                    </div>                            
-                  </div>
                 </nav>
  
                 <div class = "columns is-2 pl-3">            
@@ -179,17 +169,12 @@
                 </div>
               </div>
             
-            <div class="box" id="gameWidget">
+            <div class="box" id="gameWidget" style='min-width: 600px;'>
               <div class="media-content">          
                 <div class="content">
                   <nav class="navbar">
                     <div class="navbar-start">
                       <h2 class="navbar-item title is-2">Games</h2>
-                    </div>
-                    <div class="navbar-end">
-                      <div class="navbar-item">
-                        <button class="button is-small is-white ">Close</button>
-                      </div>                            
                     </div>
                   </nav>
                   <div class="level">
@@ -262,13 +247,13 @@
                         <div>
                           <h1 class="is-size-4">Off the Line</h1>
                           <p class="is-size-6">by: Bryan Perfetto</p>
-                          <p><strong>Test your timing with this twitchy arcade tapper!</strong></p>
+                          <p><strong>Test your timing with this twitchy tapper!</strong></p>
                         </div>
                       </div>
                     </div>
                     <div class="level-right">
                       <div class="level-item">
-                        <a href="./assets/Games/offLine.html" target="_blank" rel="noreferrer noopener"><img onmouseenter="play(this)" onmouseleave="offline(this)" id="gameBtn" src="./assets/images/Off The Line.gif" alt=""></a>
+                        <a href="./assets/Games/offLine.html" target="_blank" rel="noreferrer noopener"><img onmouseenter="play(this)" onmouseleave="offline(this)" id="gameBtn" src="./assets/images/offline.gif" alt=""></a>
                       </div>
                     </div>
                   </div>
@@ -360,7 +345,7 @@
     <script src = './assets/youtubeJs/youtube.js'></script> 
     <script src = './assets/newsJs/news.js'></script> 
     <script src = './assets/weather.js'></script> 
-    <script src="./ui.js"></script>
+    <script src="./ui-assets/ui.js"></script>
 
   </body>
   </html>
