@@ -1,0 +1,124 @@
+/* BACKGROUND COLOR */
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 0, 0, 0),
+    rgba(132, 218, 204, 0.849),
+    rgb(97, 216, 231)
+  );
+  min-height: 1224px;
+}
+
+#topNav {
+  background-image: linear-gradient(
+    to top right,
+    rgba(255, 0, 0, 0),
+    rgba(132, 218, 204, 0.849),
+    rgb(97, 216, 231)
+  );
+  border-bottom: 5px grey;
+}
+
+/* SIDEB BAR TITLE COLORS */
+/*YOUTUBE*/
+#youtubeSurf {
+  color: rgb(240, 119, 119);
+}
+#youtubeSurf:hover {
+  background-color: rgba(136, 255, 195, 0);
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+/*GAMES*/
+#gameSelect {
+  color: rgb(58, 13, 13);
+}
+#gameSelect:hover {
+  background-color: rgba(121, 177, 149, 0);
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+/*WEATHER*/
+#weatherSelect {
+  color: rgb(109, 184, 245);
+}
+#weatherSelect:hover {
+  background-color: rgba(163, 226, 245, 0);
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+/*NEWS*/
+#newsSelect {
+  color: rgb(86, 107, 109);
+}
+#newsSelect:hover {
+  background-color: rgb(81, 153, 160, 0);
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+/*----- YOUTUBESURF API STYLING -----*/
+#youtubeWidget {
+  background-color: rgba(136, 255, 195, 0);
+  border: 2px solid grey;
+}
+#youtubeWidget h2 {
+  color: rgb(240, 119, 119);
+  margin-left: -10px;
+}
+#youtubeWidget div.navbar-item {
+  margin-top: -15px;
+}
+#youtubeWidget nav {
+  background-color: rgba(136, 255, 195, 0);
+}
+#youtubeWidget button {
+  background-color: rgb(240, 119, 119);
+  color: rgb(255, 255, 255);
+}
+
+/*----- GAMES API STYLING -----*/
+#gameWidget {
+  background-color: rgba(121, 177, 149, 0);
+  border: 2px solid grey;
+}
+#gameWidget h2 {
+  color: rgb(58, 13, 13);
+}
+#gameWidget nav {
+  background-color: rgba(121, 177, 149, 0);
+  margin-bottom: 5px;
+}
+#gameWidget button {
+  background-color: rgb(58, 13, 13, 0.616);
+  color: rgb(255, 255, 255);
+}
+
+/*----- WEATHER API STYLING -----*/
+#weatherWidget {
+  background-color: rgba(163, 226, 245, 0);
+  border: 2px solid grey;
+}
+#weatherWidget h2 {
+  color: rgb(109, 184, 245);
+}
+#weatherWidget nav {
+  background-color: rgba(163, 226, 245, 0);
+}
+#weatherWidget button {
+  background-color: rgb(124, 193, 250);
+  color: rgb(255, 255, 255);
+}
+
+/*----- NEWS API STYLING -----*/
+#newsWidget {
+  background-color: rgba(81, 153, 160, 0);
+  border: 2px solid grey;
+}
+#newsWidget h2 {
+  color: rgb(86, 107, 109);
+}
+#newsWidget button {
+  background-color: rgb(86, 107, 109);
+  color: rgb(255, 255, 255);
+}
