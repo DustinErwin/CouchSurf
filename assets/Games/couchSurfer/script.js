@@ -113,6 +113,7 @@ document.addEventListener("keyup", (event) => {
       start.setAttribute("class", "start");
       squares[currentCouchIndex].classList.add("boom");
       clearInterval(covidId);
+      return;
     }
 
     for (let i = 0; i <= covids.length - 1; i++) {
@@ -120,6 +121,7 @@ document.addEventListener("keyup", (event) => {
         start.textContent = "Game Over";
         start.setAttribute("class", "start");
         clearInterval(covidId);
+        return;
       }
     }
 
@@ -128,6 +130,7 @@ document.addEventListener("keyup", (event) => {
       start.textContent = "You Win";
       start.setAttribute("class", "start");
       clearInterval(covidId);
+      return;
     }
     incDiff();
   }
@@ -140,7 +143,7 @@ document.addEventListener("keyup", (event) => {
     covidId = setInterval(moveCovids, intTime);
   }
 
-  //Shoots projectile
+  //Sets data to shoot
   function shoot(e) {
     let projId;
     let currentLaserIndex = currentCouchIndex;
@@ -164,6 +167,7 @@ document.addEventListener("keyup", (event) => {
         );
         clearInterval(projId);
 
+        //Tallies and prints score
         const covidTakenDown = covids.indexOf(currentLaserIndex);
         covidsTakenDown.push(covidTakenDown);
         result++;
@@ -179,6 +183,7 @@ document.addEventListener("keyup", (event) => {
       }
     }
 
+    //Shoots laser on spacebar press
     switch (e.keyCode) {
       case 32:
         projId = setInterval(moveLaser, 100);
@@ -190,10 +195,14 @@ document.addEventListener("keyup", (event) => {
     }
   }
 
+  //Reset button
   rst.addEventListener("click", reset);
   function reset() {
     window.location.href = "CovidCouch.html";
   }
+  //Failsafe for multiple game iterations
   times = 1;
+
+  //Starts shooting process
   document.addEventListener("keyup", shoot);
 });
