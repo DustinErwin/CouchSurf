@@ -67,7 +67,7 @@ getCoordinates();
 
 function callWeatherAPI () {
 
-  /
+ 
   const queryUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + coordinates[0] + "&lon=" + coordinates[1]+ weatherAPIKey;
   // Get current city data via API    
 
