@@ -3,14 +3,13 @@
 //youtube assignments
 let youTubeApiKey = "AIzaSyDMgUuuhmaYprHEA1ZG7iJBa-OY-kk092c";
 let videoOption = $(".videoOptions");
-let data = "";
 let videoSelectBtn = $(".videoSelectBtn");
-let testVideoLink = "https://www.youtube.com/embed/4H2lnt3QkyA";
 let videoPlayer = $("#videoPlayer");
 
-//displays current videos saved in local storage
+//displays current videos saved in local storage as soon as page loads
 displaySavedVideos();
 
+//creates p tags and delete button for saved items
 function displaySavedVideos() {
   videosDiv = $(".savedVideos");
   videosDiv.empty();
@@ -24,7 +23,7 @@ function displaySavedVideos() {
         .attr({
           type: "button",
           class: "couchSurf-btn deleteSingleBtn individual-delete-button",
-          value: "savedVideoList[i].items[0].snippet.title",
+          value: savedVideoList[i].items[0].snippet.title,
         })
         .text("Delete");
       pTag
