@@ -67,7 +67,7 @@
                   <li><a id="gameSelect" class="dropdown-item title is-4"><img src="https://img.icons8.com/office/16/000000/controller.png"/>
                     Games 
                   </a></li>
-                 
+
                   
                 </ul>
               </div>
@@ -88,7 +88,7 @@
 
                         <p class="subtitle">Top videos in popular catagories</p>
                         <div class="select">
-                          <select class="test videoOptions">
+                          <select class=" videoOptions">
                             <!--category values are youtube category ids. Used in JS to grab that category-->
                             <option>Select Catagory</option>
                             <option class="musicOption" value="10">Music</option>
@@ -102,8 +102,8 @@
 
                         <button type="button" class="mb-4 videoSelectBtn button couchSurf-btn">Surf!</button>
 
-                     
-                        <div class="image is-16by9">
+                        <div class="videoTitleDiv"></div>
+                        <div class="image is-3by2 ">
                           <iframe class="has-ratio"
                           id="videoPlayer"                        
                           src="https://gettravel.com/wp-content/uploads/2018/04/Video-Placeholder.jpg"
@@ -263,17 +263,7 @@
           </div>
           <!--Third Column-->
             <div class="column">
-              <!--Second Box-->
-
-
-            <!--Top News Section-->
-            <!-- Hidden News Box
-            <div class="box">
-                  <h2 class="title is-2">News Surf</h2>
-                  <p class="subtitle">Top news in popular catagories</p>
-                  <input class="input newsOptions" type="text" placeholder="Text input" >
-            </div>
-            -->
+             
                 <div class="box mr-4" id="newsWidget">                  
                     <article class="media">
                       <div class="media-left">
@@ -284,7 +274,7 @@
                   <p class="subtitle">Top news in popular catagories</p>
                   <input class="input newsOptions" type="text" placeholder="Text input">
                   </div>                  
-                  <button type="button" class="newsSelectBtn button couchSurf-btn" >Surf!</button>
+                  <button type="button" class="newsSelectBtn button couchSurf-btn mb-4" >Surf!</button>
                   <br />
                   <div class="currentArticleDiv"><!--Container for all things News! -->
                 <img src="https://keaganscastle.com/img/placeholders/news.png"
@@ -321,14 +311,6 @@
             
                   
                 </div>
-                <!--Hidden Buttons
-                  <br>
-                <button type="button" class="saveArticle button is-primary">Save for Later</button>
-                  <button type="button" class="deleteNewsBtn button is-primary">Delete Saved Articles</button>
-                  <div class="savedArticlesDiv"></div>
-                
-                
-                -->
                 
                 </div>
 

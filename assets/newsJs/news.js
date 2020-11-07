@@ -12,11 +12,11 @@ function displaySavedArticles() {
   if (savedArticleList != null) {
     for (i = 0; i < savedArticleList.length; i++) {
       //creates delete button
-      deleteSingleBtn = $("<button>")
+      deleteSingleNewsBtn = $("<button>")
         .attr({
           type: "button",
-          class: "couchSurf-btn deleteSingleBtn individual-delete-button",
-          value: "saved[i].items[0].snippet.title",
+          class: "couchSurf-btn deleteSingleNewsBtn individual-delete-button",
+          value: savedArticleList[i].articles[0].title,
         })
         .text("Delete");
       //creates a ptag from local storage data
@@ -26,7 +26,7 @@ function displaySavedArticles() {
         )
         .val(savedArticleList[i].articles[0].title)
         .addClass("pTag")
-        .append(deleteSingleBtn);
+        .append(deleteSingleNewsBtn);
 
       savedArticlesDiv.append(pTag);
     }
@@ -73,7 +73,7 @@ function displayCurrentArticle() {
   currentArticleDiv.empty();
 
   //creates tags
-  titleTag = $("<h2>")
+  titleTag = $("<h2>");
   imageTag = $("<img />").attr("src", currentArticle.articles[0].image);
   descriptionTag = $("<p>");
   sourceTag = $("<a>");
@@ -81,7 +81,7 @@ function displayCurrentArticle() {
   currentArticleDiv.append(titleTag);
   // appends News Image
   imageTag.attr("width", "480");
- 
+
   currentArticleDiv.append(imageTag);
   //append news content below image
   descriptionTag.text(currentArticle.articles[0].description);
@@ -135,7 +135,7 @@ $(document).on("click", ".pTag", function () {
       imageTag = $("<img />");
       descriptionTag = $("<p>");
       sourceTag = $("<a>");
-      titleTag.text(savedArticleList[i].articles[0].title)
+      titleTag.text(savedArticleList[i].articles[0].title);
       currentArticleDiv.append(titleTag);
       // appends News Image
       imageTag.attr("width", "480");
@@ -166,11 +166,8 @@ $(document).on("click", ".deleteSingleNewsBtn", function () {
   //for each item, check if $this id === saved video list name
   for (i = 0; i < savedArticleList.length; i++) {
     //if true, remove that index from the list
-    if (
-      savedArticleList[i].articles[0].title ===
-      deleteSingleNewsBtn.attr("value")
-    ) {
-      savedVideoList.splice([i], 1);
+    if (savedArticleList[i].articles[0].title === $(this).attr("value")) {
+      savedArticleList.splice([i], 1);
       //then set that new list back to local storage
       localStorage.setItem(
         "savedArticleList",
@@ -178,4 +175,5 @@ $(document).on("click", ".deleteSingleNewsBtn", function () {
       );
     }
   }
+  displaySavedArticles();
 });
