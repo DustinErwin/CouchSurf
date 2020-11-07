@@ -73,15 +73,15 @@ function displayCurrentArticle() {
   currentArticleDiv.empty();
 
   //creates tags
-  titleTag = $("<h2>");
-  imageTag = $("<img />");
+  titleTag = $("<h2>")
+  imageTag = $("<img />").attr("src", currentArticle.articles[0].image);
   descriptionTag = $("<p>");
   sourceTag = $("<a>");
-  titleTag.text(currentArticle.articles[0].title);
+
   currentArticleDiv.append(titleTag);
   // appends News Image
   imageTag.attr("width", "480");
-  imageTag.attr("src", currentArticle.articles[0].image);
+ 
   currentArticleDiv.append(imageTag);
   //append news content below image
   descriptionTag.text(currentArticle.articles[0].description);
@@ -90,7 +90,6 @@ function displayCurrentArticle() {
   sourceTag.text("Source: " + currentArticle.articles[0].source.name);
   sourceTag.attr("href", currentArticle.articles[0].source.url);
   currentArticleDiv.append(sourceTag);
-  newsContainer.prepend(currentArticleDiv);
 }
 
 //grabs save Article Button
@@ -136,7 +135,7 @@ $(document).on("click", ".pTag", function () {
       imageTag = $("<img />");
       descriptionTag = $("<p>");
       sourceTag = $("<a>");
-      titleTag.text(savedArticleList[i].articles[0].title);
+      titleTag.text(savedArticleList[i].articles[0].title)
       currentArticleDiv.append(titleTag);
       // appends News Image
       imageTag.attr("width", "480");
