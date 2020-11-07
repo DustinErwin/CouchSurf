@@ -29,7 +29,7 @@ function displaySavedVideos() {
       pTag
         .attr({
           value: "savedVideoList[i].items[0].snippet.title",
-          id: "savedVideoList[i].items[0].id",
+          id: savedVideoList[i].items[0].id,
         })
         .text(savedVideoList[i].items[0].snippet.title);
       //append individual delete button button
@@ -41,6 +41,7 @@ function displaySavedVideos() {
 
 //creates dynamic onClick that changes video on screen
 $(document).on("click", ".videoTitles", function () {
+  console.log($(this).attr("id"));
   videoPlayer.attr(
     "src",
     `https://www.youtube.com/embed/${$(this).attr("id")}`
