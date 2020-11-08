@@ -10,7 +10,6 @@
   background-image: url("./images/Play.png");
 }
 
-
 .couchSurf-btn {
   background-color: #38b6ff;
   color: white;
@@ -31,6 +30,6 @@
   display: none;
 }
 
-.surfBtnMargins{
+.surfBtnMargins {
   margin-bottom: 1em;
 }
