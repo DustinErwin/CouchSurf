@@ -49,7 +49,7 @@ function getNewsData() {
       displayCurrentArticle();
     },
     error: function () {
-      console.log("Request Failed");
+      console.warn("Request Failed");
     },
   });
 }

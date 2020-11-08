@@ -41,7 +41,6 @@ function displaySavedVideos() {
 
 //creates dynamic onClick that changes video on screen
 $(document).on("click", ".videoTitles", function () {
-  console.log($(this).attr("id"));
   videoPlayer.attr(
     "src",
     `https://www.youtube.com/embed/${$(this).attr("id")}`
@@ -90,7 +89,7 @@ function getVideoData() {
       localStorage.setItem("currentYoutubeVideo", JSON.stringify(data));
     },
     error: function () {
-      console.log("Request Failed");
+      console.warn("Request Failed");
     },
   });
 }

@@ -1,8 +1,7 @@
 .naked {
-    text-decoration: none!important;
-    
-  }
+  text-decoration: none !important;
+}
 
-  .list{
-   list-style: none!important;
-  }
+.list {
+  list-style: none !important;
+}
